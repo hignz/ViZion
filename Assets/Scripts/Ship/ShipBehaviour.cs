@@ -1,18 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ShipBehaviour : MonoBehaviour {
-
-
-    void Start () {
-
-    }
-	
-	void Update () {
-		
-	}
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -20,9 +9,12 @@ public class ShipBehaviour : MonoBehaviour {
         {
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                // Enter planet
+                Planet planetScript = collision.gameObject.GetComponent<Planet>();
 
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                if (FindObjectOfType<GameManager>().playerPoints >= planetScript.requiredPoints)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
             }
         }
     }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ShipMovement : MonoBehaviour {
 
@@ -20,6 +18,9 @@ public class ShipMovement : MonoBehaviour {
     [SerializeField]
     private TrailRenderer trail;
 
+    [SerializeField]
+    private float reverseSpeed = 2;
+
     void Start ()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
@@ -31,7 +32,12 @@ public class ShipMovement : MonoBehaviour {
         yAxis = Input.GetAxis("Vertical");
 
         ClampVel();
-        //RotateShip(xAxis);
+        RotateShip(xAxis);
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            Reverse(reverseSpeed);
+        }
     }
 
     void FixedUpdate()
@@ -54,13 +60,15 @@ public class ShipMovement : MonoBehaviour {
             Vector2 force = transform.right * amount * speed;
 
             myRigidBody.AddForce(force);
+        }
+    }
 
-            trail.time = 0.5f;
-        }
-        else
-        {
-            trail.time = 0f;
-        }
+    private void Reverse(float amount)
+    {
+        Vector2 force = transform.right * amount;
+
+        myRigidBody.AddForce(-force);
+
     }
 
     private void RotateShip(float direction)

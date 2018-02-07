@@ -3,7 +3,7 @@
 public class Planet : MonoBehaviour {
 
     [SerializeField]
-    private int requiredPoints;
+    public int requiredPoints;
 
     public GameObject lockedUI;
     public GameObject unlockedUI;
