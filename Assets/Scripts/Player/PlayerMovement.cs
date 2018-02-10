@@ -5,13 +5,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    private Rigidbody2D myRigidBody;
+    private Rigidbody2D rb2d;
 
     private Vector2 direction;
 
     void Start()
     {
-        myRigidBody = GetComponent<Rigidbody2D>();
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -26,10 +26,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
+        float xAxis = Input.GetAxisRaw("Horizontal");
+        float yAxis = Input.GetAxisRaw("Vertical");
 
-        myRigidBody.velocity = direction.normalized * speed;
+        rb2d.velocity = direction.normalized * speed;
     }
 
     void GetInput()
