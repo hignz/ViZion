@@ -2,7 +2,7 @@
 
 public class WeaponManager : MonoBehaviour {
 
-    public GameObject currentWeapon;
+    public GameObject currentWeapon, droppedWeapon;
     public Weapon weapon;
 
 	void Start () {
@@ -10,10 +10,15 @@ public class WeaponManager : MonoBehaviour {
         GetComponent<SpriteRenderer>().sprite = weapon.sprite;
 	}
 
-    public void PickupWeapon(GameObject weapon)
+    public void PickupWeapon(GameObject pickup)
     {
-        currentWeapon = weapon;
-        weapon = currentWeapon.GetComponent<Weapon>().gameObject;
-        GetComponent<SpriteRenderer>().sprite = weapon.GetComponent<SpriteRenderer>().sprite;
+        currentWeapon = pickup;
+        pickup = currentWeapon.GetComponent<Weapon>().gameObject;
+        GetComponent<SpriteRenderer>().sprite = pickup.GetComponent<SpriteRenderer>().sprite;
+    }
+
+    public void DropWeapon()
+    {
+        currentWeapon = null;
     }
 }

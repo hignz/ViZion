@@ -3,9 +3,11 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour
 {
-    public Vector3 direction;
+    [SerializeField]
+    private float speed = 5;
 
-    float timer = 10.0f;
+    [SerializeField]
+    private float destroyTimer = 10.0f;
 
     void Start()
     {
@@ -14,12 +16,9 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
+        Destroy(this.gameObject, destroyTimer);
 
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D col)

@@ -10,4 +10,9 @@ public class Weapon : MonoBehaviour {
 		
 	}
 
+    public void Fire()
+    {
+        Debug.Log("Pew Pew");
+    }
+
 }
