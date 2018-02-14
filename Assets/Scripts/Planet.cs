@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class Planet : MonoBehaviour {
+public class Planet : MonoBehaviour
+{
 
     [SerializeField]
     public int requiredPoints;
