@@ -4,7 +4,7 @@ public class Weapon : MonoBehaviour {
 
     public Sprite sprite;
     public GameObject bullet;
-    public int ammo, damage, fireRate, range;
+    public int ammo, fireRate, range;
 
 	void Start () {
 		
