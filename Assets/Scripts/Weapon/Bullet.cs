@@ -16,9 +16,9 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        Destroy(this.gameObject, destroyTimer);
-
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
+        Destroy(this.gameObject, destroyTimer);
     }
 
     void OnCollisionEnter2D(Collision2D col)

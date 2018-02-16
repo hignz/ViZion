@@ -2,17 +2,14 @@
 
 public class Weapon : MonoBehaviour {
 
-    public Sprite sprite;
-    public GameObject bullet;
-    public int ammo, fireRate, range;
+    [SerializeField]
+    private GameObject bullet;
 
-	void Start () {
-		
-	}
+    public int ammo, fireRate;
 
-    public void Fire()
+    public virtual void Fire()
     {
-        Debug.Log("Pew Pew");
+        Debug.Log("Weapon Pew Pew");
     }
 
 }

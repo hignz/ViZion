@@ -9,9 +9,12 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 direction;
 
+    public Animator myAnim;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        myAnim = GetComponent<Animator>();
     }
 
     private void Update()
