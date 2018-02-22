@@ -21,6 +21,10 @@ public class ShipMovement : MonoBehaviour {
     [SerializeField]
     private float reverseSpeed = 2;
 
+    public ParticleSystem mainParticleSys;
+    public ParticleSystem leftParticleSys;
+    public ParticleSystem rightParticleSys;
+
     void Start ()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
@@ -34,15 +38,40 @@ public class ShipMovement : MonoBehaviour {
         ClampVel();
         RotateShip(xAxis);
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            Reverse(reverseSpeed);
-        }
+        HandleMainTrail();
+        HandleWingTrails();
+
     }
 
     void FixedUpdate()
     {
         Thrust(yAxis);
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            Thrust(yAxis);
+        }
+    }
+
+    private void HandleWingTrails()
+    {
+        if (!(xAxis > 0))
+        {
+            leftParticleSys.Play();
+        }
+
+        if (!(xAxis < 0))
+        {
+            rightParticleSys.Play();
+        }
+    }
+
+    private void HandleMainTrail()
+    {
+        if (!(yAxis > 0))
+        {
+            mainParticleSys.Play();
+        }
     }
 
     private void ClampVel()
@@ -65,10 +94,12 @@ public class ShipMovement : MonoBehaviour {
 
     private void Reverse(float amount)
     {
-        Vector2 force = transform.right * amount;
+        if (amount < 0)
+        {
+            Vector2 force = transform.right * amount;
 
-        myRigidBody.AddForce(-force);
-
+            myRigidBody.AddForce(-force);
+        }
     }
 
     private void RotateShip(float direction)

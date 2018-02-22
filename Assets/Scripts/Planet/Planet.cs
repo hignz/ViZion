@@ -8,6 +8,19 @@ public class Planet : MonoBehaviour {
     public GameObject lockedUI;
     public GameObject unlockedUI;
 
+    public bool hasRotation = true;
+
+    [SerializeField]
+    private float rotationSpeed = 0.1f;
+
+    void Update()
+    {
+        if (hasRotation)
+        {
+            transform.Rotate(0, 0, rotationSpeed);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")

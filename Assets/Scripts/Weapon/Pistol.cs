@@ -1,11 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Pistol : Weapon {
 
+    void Start()
+    {
+        ammo = 16;
+    }
+
     public override void Fire()
     {
-        Debug.Log("Pistol Pew PEw");
+        Debug.Log("Pistol Pew Pew");
     }
 }
