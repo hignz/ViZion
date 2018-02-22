@@ -10,6 +10,8 @@ TagManager:
   - Enemy
   - Bullet
   - ArcadeMachine
+  - Planet
+  - Atmosphere
   layers:
   - Default
   - TransparentFX

@@ -9,7 +9,7 @@ public class ArcadeMachine : MonoBehaviour {
 
     SpriteRenderer spr;
 
-    public bool isOn;
+    public bool isOn = false;
 
 	void Start () {
         spr = GetComponent<SpriteRenderer>();

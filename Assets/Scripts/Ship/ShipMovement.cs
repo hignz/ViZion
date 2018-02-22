@@ -5,7 +5,7 @@ public class ShipMovement : MonoBehaviour {
     private Rigidbody2D myRigidBody;
 
     [SerializeField]
-    private float speed = 5;
+    private float acceleration = 100;
 
     [SerializeField]
     private float maxSpeed = 10;
@@ -54,25 +54,17 @@ public class ShipMovement : MonoBehaviour {
     {
         if (amount > 0)
         {
-            Vector2 force = transform.right * amount * speed;
+            Vector2 force = transform.right * (amount * acceleration * 2) * Time.deltaTime;
 
             myRigidBody.AddForce(force);
-        }
-    }
 
-    private void Reverse(float amount)
-    {
-        if (amount < 0)
-        {
-            Vector2 force = transform.right * amount;
-
-            myRigidBody.AddForce(-force);
+            Debug.Log(myRigidBody.velocity);
         }
     }
 
     private void RotateShip(float direction)
     {
-        transform.Rotate(0, 0, -direction * rotateSpeed);
+        transform.Rotate(0, 0, -direction * (rotateSpeed * 2) * Time.deltaTime);
     }
 
 }

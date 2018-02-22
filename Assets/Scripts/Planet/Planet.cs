@@ -10,15 +10,27 @@ public class Planet : MonoBehaviour {
 
     public bool hasRotation = true;
 
+    public Transform orbitTarget;
+
     [SerializeField]
     private float rotationSpeed = 0.1f;
+
+    public float orbitSpeed = 2;
+
+    private Vector3 zAxis = new Vector3(0, 0, 1);
+
 
     void Update()
     {
         if (hasRotation)
         {
-            transform.Rotate(0, 0, rotationSpeed);
+            transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
         }
+    }
+
+    void FixedUpdate()
+    {
+        transform.RotateAround(orbitTarget.position, zAxis, orbitSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
