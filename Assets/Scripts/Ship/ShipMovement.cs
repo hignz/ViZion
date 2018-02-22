@@ -16,14 +16,7 @@ public class ShipMovement : MonoBehaviour {
     private float xAxis, yAxis;
 
     [SerializeField]
-    private TrailRenderer trail;
-
-    [SerializeField]
     private float reverseSpeed = 2;
-
-    public ParticleSystem mainParticleSys;
-    public ParticleSystem leftParticleSys;
-    public ParticleSystem rightParticleSys;
 
     void Start ()
     {
@@ -37,10 +30,6 @@ public class ShipMovement : MonoBehaviour {
 
         ClampVel();
         RotateShip(xAxis);
-
-        HandleMainTrail();
-        HandleWingTrails();
-
     }
 
     void FixedUpdate()
@@ -50,27 +39,6 @@ public class ShipMovement : MonoBehaviour {
         if (Input.GetKey(KeyCode.S))
         {
             Thrust(yAxis);
-        }
-    }
-
-    private void HandleWingTrails()
-    {
-        if (!(xAxis > 0))
-        {
-            leftParticleSys.Play();
-        }
-
-        if (!(xAxis < 0))
-        {
-            rightParticleSys.Play();
-        }
-    }
-
-    private void HandleMainTrail()
-    {
-        if (!(yAxis > 0))
-        {
-            mainParticleSys.Play();
         }
     }
 
