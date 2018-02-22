@@ -9,19 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1230426130987724}
+  m_RootGameObject: {fileID: 1833178857977464}
   m_IsPrefabParent: 1
---- !u!1 &1230426130987724
+--- !u!1 &1833178857977464
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4728519553913306}
-  - component: {fileID: 212451617712022226}
-  - component: {fileID: 58226955535269458}
-  - component: {fileID: 114806276944529186}
+  - component: {fileID: 4760840537064114}
+  - component: {fileID: 212996729398981074}
+  - component: {fileID: 58711642854399314}
+  - component: {fileID: 114227556235684852}
   m_Layer: 0
   m_Name: Uzi
   m_TagString: Pickup
@@ -29,12 +29,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4728519553913306
+--- !u!4 &4760840537064114
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230426130987724}
+  m_GameObject: {fileID: 1833178857977464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.66, y: -0.64, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
@@ -42,12 +42,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58226955535269458
+--- !u!58 &58711642854399314
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230426130987724}
+  m_GameObject: {fileID: 1833178857977464}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -57,12 +57,12 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.51
---- !u!114 &114806276944529186
+--- !u!114 &114227556235684852
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230426130987724}
+  m_GameObject: {fileID: 1833178857977464}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 294a617fbd465ef44a8101dbd952ed5b, type: 3}
@@ -71,12 +71,13 @@ MonoBehaviour:
   bullet: {fileID: 0}
   ammo: 20
   fireRate: 0
---- !u!212 &212451617712022226
+  reloadSpeed: 0
+--- !u!212 &212996729398981074
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230426130987724}
+  m_GameObject: {fileID: 1833178857977464}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

@@ -1,9 +1,27 @@
 fileFormatVersion: 2
 guid: 58bac77b930059746a8e36cb5baed1f2
-timeCreated: 1518179255
+timeCreated: 1519328223
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: tut5sprites_0
+    21300002: tut5sprites_1
+    21300004: tut5sprites_2
+    21300006: tut5sprites_3
+    21300008: tut5sprites_4
+    21300010: tut5sprites_5
+    21300012: tut5sprites_6
+    21300014: tut5sprites_7
+    21300016: tut5sprites_8
+    21300018: tut5sprites_9
+    21300020: tut5sprites_10
+    21300022: tut5sprites_11
+    21300024: tut5sprites_12
+    21300026: tut5sprites_13
+    21300028: tut5sprites_14
+    21300030: tut5sprites_15
+    21300032: tut5sprites_16
+    21300034: tut5sprites_17
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -78,7 +96,259 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: tut5sprites_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 15
+        width: 67
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 14
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 37
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_3
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 35
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_4
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 33
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_5
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 38
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_6
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 34
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_7
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 34
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_8
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 33
+        width: 31
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_9
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 6
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_10
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 3
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_11
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 21
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_12
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 9
+        width: 67
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_13
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 9
+        width: 67
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_14
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 14
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_15
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 14
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_16
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 6
+        width: 28
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tut5sprites_17
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 3
+        width: 28
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
