@@ -57,8 +57,6 @@ public class ShipMovement : MonoBehaviour {
             Vector2 force = transform.right * (amount * acceleration * 2) * Time.deltaTime;
 
             myRigidBody.AddForce(force);
-
-            Debug.Log(myRigidBody.velocity);
         }
     }
 

@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
-    public GameObject mainMenuUI;
+    public GameObject mainMenuUI, splashScreenUI;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            if (mainMenuUI.activeInHierarchy)
+            {
+                mainMenuUI.SetActive(false);
+                splashScreenUI.SetActive(true);
+            }
         }
     }
 
