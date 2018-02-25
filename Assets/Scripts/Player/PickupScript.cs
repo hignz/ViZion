@@ -11,11 +11,6 @@ public class PickupScript : MonoBehaviour {
             transform.Find("WeaponSlot").GetComponent<WeaponManager>().PickupWeapon(pickupInRange);
             pickupInRange.SetActive(false);
         }
-
-        if (Input.GetKey(KeyCode.Mouse1))
-        {
-            transform.Find("WeaponSlot").GetComponent<WeaponManager>().DropWeapon();
-        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

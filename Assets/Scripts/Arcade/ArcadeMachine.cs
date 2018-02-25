@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ArcadeMachine : MonoBehaviour {
 
@@ -14,10 +12,6 @@ public class ArcadeMachine : MonoBehaviour {
 	void Start () {
         spr = GetComponent<SpriteRenderer>();
         turnedOff = spr.sprite;
-	}
-	
-	void Update () {
-		
 	}
 
     void OnTriggerStay2D(Collider2D collision)
