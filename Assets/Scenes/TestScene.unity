@@ -623,19 +623,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4698312220456900, guid: 38f51805e941e744ba2b2a3f8bf09531, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4698312220456900, guid: 38f51805e941e744ba2b2a3f8bf09531, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4698312220456900, guid: 38f51805e941e744ba2b2a3f8bf09531, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.09145433
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4698312220456900, guid: 38f51805e941e744ba2b2a3f8bf09531, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9958093
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4698312220456900, guid: 38f51805e941e744ba2b2a3f8bf09531, type: 2}
       propertyPath: m_LocalPosition.x
@@ -647,7 +647,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4698312220456900, guid: 38f51805e941e744ba2b2a3f8bf09531, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 10.495001
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114464383534137604, guid: 38f51805e941e744ba2b2a3f8bf09531, type: 2}
@@ -702,6 +702,12 @@ Prefab:
       propertyPath: firePoint
       value: 
       objectReference: {fileID: 1465546071}
+    - target: {fileID: 114203531446760144, guid: 1f75c6a08f1e78c40a6617aa4475acf3,
+        type: 2}
+      propertyPath: LineRendererPrefab
+      value: 
+      objectReference: {fileID: 4733165814704250, guid: c12b41b090532554db71a54d9cc8ec14,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f75c6a08f1e78c40a6617aa4475acf3, type: 2}
   m_IsPrefabParent: 0
@@ -881,6 +887,11 @@ Prefab:
       value: 
       objectReference: {fileID: 4733165814704250, guid: c12b41b090532554db71a54d9cc8ec14,
         type: 2}
+    - target: {fileID: 114227556235684852, guid: 0d649e7245d4c4e4eb4a46238588ff3f,
+        type: 2}
+      propertyPath: ammo
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d649e7245d4c4e4eb4a46238588ff3f, type: 2}
   m_IsPrefabParent: 0
