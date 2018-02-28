@@ -12,19 +12,16 @@ public class Uzi : Weapon {
         Vector2 firePos = new Vector2(firePoint.position.x, firePoint.position.y);
 
         RaycastHit2D hit = Physics2D.Raycast(firePos, (mousePos-firePos) * 100, 100);
-        Effect();
+
+        // Show bullet trail
+        Instantiate(LineRendererPrefab, firePoint.position, firePoint.rotation);
 
         Debug.DrawLine(firePos, (mousePos-firePos), Color.cyan);
 
         if (hit.collider != null)
         {
             Debug.DrawLine(firePos, hit.point, Color.red);
-            Debug.Log("We hit " + hit.collider.name);
+            Debug.Log("I hit " + hit.collider.name);
         }
-    }
-
-    void Effect()
-    {
-        Instantiate(LineRendererPrefab, firePoint.position, firePoint.rotation);
     }
 }
