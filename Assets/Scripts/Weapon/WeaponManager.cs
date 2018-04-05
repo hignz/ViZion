@@ -14,6 +14,7 @@ public class WeaponManager : MonoBehaviour
 
         currentWeapon = pickup;
         currentWeapon.transform.parent = this.transform.parent;
+        currentWeapon.transform.localRotation = transform.localRotation;
         weaponScript = currentWeapon.GetComponent<Weapon>();
         GetComponent<SpriteRenderer>().sprite = currentWeapon.GetComponent<SpriteRenderer>().sprite;
 
@@ -45,7 +46,7 @@ public class WeaponManager : MonoBehaviour
 
     void DropWeapon()
     {
-        Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y);
 
         GameObject weaponDrop = Instantiate<GameObject>(currentWeapon, pos, transform.rotation);
         weaponDrop.name = currentWeapon.name;

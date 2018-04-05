@@ -12,6 +12,7 @@ TagManager:
   - ArcadeMachine
   - Planet
   - Atmosphere
+  - PathNode
   layers:
   - Default
   - TransparentFX

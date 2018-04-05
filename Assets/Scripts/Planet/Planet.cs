@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Planet : MonoBehaviour {
 
@@ -19,6 +20,7 @@ public class Planet : MonoBehaviour {
 
     private Vector3 zAxis = new Vector3(0, 0, 1);
 
+    public Object level;
 
     void Update()
     {
@@ -46,6 +48,17 @@ public class Planet : MonoBehaviour {
             {
                 lockedUI.SetActive(true);
                 unlockedUI.SetActive(false);
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            if (FindObjectOfType<GameManager>().playerPoints >= requiredPoints && Input.GetKeyUp(KeyCode.Space))
+            {
+                SceneManager.LoadScene(level.name);
             }
         }
     }
