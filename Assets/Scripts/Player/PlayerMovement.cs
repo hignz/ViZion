@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator myAnim;
 
+    public int restrictMinX, restrictMaxX;
+    public int restrictMinY, restrictMaxY;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -20,11 +23,44 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         GetInput();
+        RestrictMovement();
     }
 
     void FixedUpdate()
     {
         Move();
+    }
+
+    void RestrictMovement()
+    {
+        if (transform.position.x > restrictMaxX)
+        {
+            Vector3 pos = transform.position;
+            pos.x = restrictMaxX;
+            transform.position = pos;
+        }
+
+        if (transform.position.x < restrictMinY)
+        {
+            Vector3 pos = transform.position;
+            pos.x = restrictMinY;
+            transform.position = pos;
+        }
+
+        if (transform.position.y > restrictMaxY)
+        {
+            Vector3 pos = transform.position;
+            pos.y = restrictMaxY;
+            transform.position = pos;
+        }
+
+        if (transform.position.y < restrictMinY)
+        {
+            Vector3 pos = transform.position;
+            pos.y = restrictMinY;
+            transform.position = pos;
+        }
+
     }
 
     void Move()

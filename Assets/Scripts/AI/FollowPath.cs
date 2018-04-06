@@ -29,6 +29,8 @@ public class FollowPath : MonoBehaviour
             body.MovePosition(Vector2.MoveTowards(
                 transform.position, target, moveSpeed * Time.deltaTime));
 
+            FaceDirection();
+
             if (!useTriggers)
             {
                 if (Vector2.Distance(transform.position, target) <= distanceToNodeTolerance)
@@ -36,6 +38,18 @@ public class FollowPath : MonoBehaviour
                     target = pathToFollow.GetNextNodePosition();
                 }
             }
+        }
+    }
+
+    void FaceDirection()
+    {
+        Vector2 moveDirection = body.velocity;
+
+        Debug.Log(moveDirection);
+
+        if (moveDirection != Vector2.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(moveDirection, Vector3.forward);
         }
     }
 
