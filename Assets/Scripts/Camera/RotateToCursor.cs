@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class RotateToCursor : MonoBehaviour
 {
@@ -20,13 +19,12 @@ public class RotateToCursor : MonoBehaviour
 
     void RotateToCamera()
     {
-        //var mouse = Input.mousePosition;
-        //var screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
-        //var offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
-        //var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-        //transform.rotation = Quaternion.Euler(0, 0, angle);
+        mousePos = Input.mousePosition;
 
-        mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z - cam.transform.position.z));
-        myRigidbody.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2((mousePos.y - transform.position.y), (mousePos.x - transform.position.x)) * Mathf.Rad2Deg);
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 diff = mousePos - transform.position;
+        float angle = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 }

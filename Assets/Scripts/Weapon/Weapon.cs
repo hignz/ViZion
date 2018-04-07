@@ -1,20 +1,25 @@
 ﻿using UnityEngine;
 
-public class Weapon : MonoBehaviour {
-
-    public enum Type
+public class Weapon : MonoBehaviour
+{
+    public enum WeaponType
     {
         SingleFire = 0,
         AutoFire = 1,
         Spread = 2
     }
 
-    [SerializeField]
-    private GameObject bullet;
+    public int damage, ammo;
 
-    public int damage, ammo, fireRate, type;
+    public float timeToFire = 0;
 
     public Transform firePoint;
+
+    public WeaponType type;
+
+    public LayerMask notToHit;
+
+    public AudioSource soundEffect;
 
     void Awake()
     {
@@ -29,6 +34,11 @@ public class Weapon : MonoBehaviour {
     public virtual void Fire()
     {
         Debug.Log("Weapon Pew Pew");
+    }
+
+    public virtual void PlaySoundEffect()
+    {
+        
     }
 
 }

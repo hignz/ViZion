@@ -46,6 +46,16 @@ public class ShipMovement : MonoBehaviour {
         {
             Thrust(yAxis);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Brake();
+        }
+    }
+
+    void Brake()
+    {
+        myRigidBody.velocity = new Vector2(0, 0);
     }
 
     private void LateUpdate()

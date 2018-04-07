@@ -45,8 +45,6 @@ public class FollowPath : MonoBehaviour
     {
         Vector2 moveDirection = body.velocity;
 
-        Debug.Log(moveDirection);
-
         if (moveDirection != Vector2.zero)
         {
             transform.rotation = Quaternion.LookRotation(moveDirection, Vector3.forward);

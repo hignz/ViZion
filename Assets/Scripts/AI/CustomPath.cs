@@ -17,8 +17,6 @@ public class CustomPath : MonoBehaviour
         Vector2 position = Vector2.zero;
         currentNode++;
 
-        Debug.Log(currentNode);
-
         if (currentNode < PathNodes.Length)
         {
             position = PathNodes[currentNode].position;
