@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScene.unity
     guid: 3892149a11e89994bb7a173f7f89cdce
+  - enabled: 1
+    path: Assets/Scenes/ArcadeAreaTest.unity
+    guid: 7ca1ccb2c641a314f8ea3aa9fe451909

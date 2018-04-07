@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1455869868398074}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.5, y: 44.5, z: 0}
+  m_LocalPosition: {x: 25.4, y: -60.6, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children:
   - {fileID: 4131689700823484}
@@ -187,7 +187,8 @@ MonoBehaviour:
   hasRotation: 1
   orbitTarget: {fileID: 0}
   rotationSpeed: 1
-  orbitSpeed: 2
+  orbitSpeed: 1
+  level: {fileID: 102900000, guid: 3892149a11e89994bb7a173f7f89cdce, type: 3}
 --- !u!212 &212243635045502264
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -202,7 +203,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 965c6e6d55dded642b4f1b428781b6bf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

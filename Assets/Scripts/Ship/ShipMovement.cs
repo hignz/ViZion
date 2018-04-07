@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using TMPro;
+using UnityEngine;
 
 public class ShipMovement : MonoBehaviour {
 
@@ -8,7 +10,7 @@ public class ShipMovement : MonoBehaviour {
     private float acceleration = 100;
 
     [SerializeField]
-    private float maxSpeed = 10;
+    private float maxSpeed = 9.9f;
 
     [SerializeField]
     private float rotateSpeed = 4;
@@ -17,6 +19,8 @@ public class ShipMovement : MonoBehaviour {
 
     [SerializeField]
     private float reverseSpeed = 2;
+
+    public TextMeshProUGUI speedOmetor; 
 
     void Start ()
     {
@@ -30,6 +34,8 @@ public class ShipMovement : MonoBehaviour {
 
         //ClampVel();
         RotateShip(xAxis);
+
+        speedOmetor.text = Math.Abs(Mathf.Max(myRigidBody.velocity.x, myRigidBody.velocity.y)).ToString("n2");
     }
 
     void FixedUpdate()
@@ -40,6 +46,21 @@ public class ShipMovement : MonoBehaviour {
         {
             Thrust(yAxis);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Brake();
+        }
+    }
+
+    void Brake()
+    {
+        myRigidBody.velocity = new Vector2(0, 0);
+    }
+
+    private void LateUpdate()
+    {
+        //speedOmetor.text = Math.Abs(Mathf.Max(myRigidBody.velocity.x, myRigidBody.velocity.y)).ToString("n2");
     }
 
     private void ClampVel()

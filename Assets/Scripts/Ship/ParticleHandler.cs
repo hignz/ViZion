@@ -7,6 +7,7 @@ public class ParticleHandler : MonoBehaviour {
     public ParticleSystem mainParticleSys;
     public ParticleSystem leftParticleSys;
     public ParticleSystem rightParticleSys;
+    public ParticleSystem lightParticleSys;
 
     private float xAxis, yAxis;
 
@@ -41,6 +42,7 @@ public class ParticleHandler : MonoBehaviour {
         if (!(yAxis > 0))
         {
             mainParticleSys.Play();
+            lightParticleSys.Play();
         }
     }
 }
