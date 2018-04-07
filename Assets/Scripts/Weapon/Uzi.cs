@@ -14,7 +14,7 @@ public class Uzi : Weapon
     {
         Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
         Vector2 firePos = new Vector2(firePoint.position.x, firePoint.position.y);
-        RaycastHit2D hit = Physics2D.Raycast(firePos, mousePos - firePos, 100);
+        RaycastHit2D hit = Physics2D.Raycast(firePos, mousePos - firePos, 100, notToHit);
         Debug.DrawLine(firePos, (mousePos - firePos) * 100, Color.cyan, 4);
 
         //// Show bullet trail

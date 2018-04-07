@@ -372,6 +372,10 @@ Prefab:
       propertyPath: m_Name
       value: spaceAstronauts_006 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1712121262997622, guid: 5d8a0a87d7cbbd347ab1adf209e7c25a, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d8a0a87d7cbbd347ab1adf209e7c25a, type: 2}
   m_IsPrefabParent: 0
@@ -2554,7 +2558,7 @@ Prefab:
     - target: {fileID: 114394166070926918, guid: 1f75c6a08f1e78c40a6617aa4475acf3,
         type: 2}
       propertyPath: notToHit.m_Bits
-      value: 800
+      value: 5120
       objectReference: {fileID: 0}
     - target: {fileID: 4686074883675076, guid: 1f75c6a08f1e78c40a6617aa4475acf3, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3696,6 +3700,11 @@ Prefab:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 114250165830916398, guid: 0d649e7245d4c4e4eb4a46238588ff3f,
+        type: 2}
+      propertyPath: notToHit.m_Bits
+      value: 5120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d649e7245d4c4e4eb4a46238588ff3f, type: 2}
   m_IsPrefabParent: 0
@@ -3758,6 +3767,10 @@ Prefab:
     - target: {fileID: 4823359709485934, guid: 5d8a0a87d7cbbd347ab1adf209e7c25a, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712121262997622, guid: 5d8a0a87d7cbbd347ab1adf209e7c25a, type: 2}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d8a0a87d7cbbd347ab1adf209e7c25a, type: 2}
@@ -4045,6 +4058,19 @@ Prefab:
     - target: {fileID: 4581036034795886, guid: 1f75c6a08f1e78c40a6617aa4475acf3, type: 2}
       propertyPath: m_LocalScale.y
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088286475097558, guid: 1f75c6a08f1e78c40a6617aa4475acf3, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030121908874678, guid: 1f75c6a08f1e78c40a6617aa4475acf3, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114394166070926918, guid: 1f75c6a08f1e78c40a6617aa4475acf3,
+        type: 2}
+      propertyPath: notToHit.m_Bits
+      value: 5120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f75c6a08f1e78c40a6617aa4475acf3, type: 2}
