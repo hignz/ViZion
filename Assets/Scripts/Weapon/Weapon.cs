@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
 
     public int damage, ammo;
 
-    public float timeToFire = 0;
+    public float fireRate = 0;
 
     public Transform firePoint;
 
@@ -31,14 +31,13 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public virtual void Fire()
+    private void Start()
     {
-        Debug.Log("Weapon Pew Pew");
+        transform.eulerAngles = new Vector3(0, 0, Random.Range(0f, 360f));
     }
 
-    public virtual void PlaySoundEffect()
-    {
-        
-    }
+    public virtual void Fire() { }
+
+    public virtual void PlaySoundEffect() { }
 
 }
