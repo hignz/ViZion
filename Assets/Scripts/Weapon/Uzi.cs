@@ -26,6 +26,23 @@ public class Uzi : Weapon
         {
             Debug.DrawLine(firePos, hit.point, Color.red, 6);
             Debug.Log("I hit " + hit.collider.name);
+
+            CheckHit(hit);
+        }
+    }
+
+    void CheckHit(RaycastHit2D hit)
+    {
+        string tag = hit.collider.tag;
+
+        switch (tag)
+        {
+            case "Enemy":
+                Debug.Log("Hit enemy: " + hit.collider.tag);
+                Destroy(hit.collider.gameObject);
+                break;
+            default:
+                break;
         }
     }
 

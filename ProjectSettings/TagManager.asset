@@ -13,6 +13,7 @@ TagManager:
   - Planet
   - Atmosphere
   - PathNode
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Wall
   - Gun
   - Enemy
-  - 
+  - Door
   - 
   - 
   - 
