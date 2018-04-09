@@ -17,7 +17,7 @@ public class Weapon : MonoBehaviour
 
     public WeaponType type;
 
-    public LayerMask notToHit;
+    public LayerMask whatToHit;
 
     public AudioSource soundEffect;
 

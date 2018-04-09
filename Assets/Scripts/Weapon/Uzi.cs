@@ -14,13 +14,12 @@ public class Uzi : Weapon
     {
         Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
         Vector2 firePos = new Vector2(firePoint.position.x, firePoint.position.y);
-        RaycastHit2D hit = Physics2D.Raycast(firePos, mousePos - firePos, 100, notToHit);
+        RaycastHit2D hit = Physics2D.Raycast(firePos, mousePos - firePos, 100, whatToHit);
         Debug.DrawLine(firePos, (mousePos - firePos) * 100, Color.cyan, 4);
 
         //// Show bullet trail
         Instantiate(LineRendererPrefab, firePoint.position, firePoint.rotation);
         PlaySoundEffect();
-        ammo--;
 
         if (hit.collider != null)
         {
@@ -49,6 +48,7 @@ public class Uzi : Weapon
     public override void PlaySoundEffect()
     {
         soundEffect.pitch = Random.Range(0.95f, 1.05f);
+        soundEffect.volume = UnityEngine.Random.Range(0.1f, soundEffect.volume);
         soundEffect.Play();
     }
 
