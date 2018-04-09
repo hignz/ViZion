@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class Shotgun : Weapon {
 
-    public Transform LineRendererPrefab;
+    public GameObject LineRendererPrefab;
+    public float bulletSpread;
 
     private void Awake()
     {
@@ -15,12 +16,13 @@ public class Shotgun : Weapon {
     {
         Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
         Vector2 firePos = new Vector2(firePoint.position.x, firePoint.position.y);
-        RaycastHit2D hit = Physics2D.Raycast(firePos, (mousePos - firePos), 100, notToHit);
+        RaycastHit2D hit = Physics2D.Raycast(firePos, (mousePos - firePos), 100, whatToHit);
         Debug.DrawLine(firePos, (mousePos - firePos) * 100, Color.cyan, 4);
 
-        Instantiate(LineRendererPrefab, firePoint.position, firePoint.rotation);
+        GameObject bullet = (GameObject)GameObject.Instantiate(LineRendererPrefab, firePoint.position, firePoint.rotation);
+        bullet.transform.Rotate(0, 0, UnityEngine.Random.Range(-10, 10));
+
         PlaySoundEffect();
-        ammo--;
 
         if (hit.collider != null)
         {

@@ -21,7 +21,14 @@ public class WeaponManager : MonoBehaviour
                 if (Input.GetButtonDown("Fire1") && lastShotTime > weaponScript.fireRate)
                 {
                     lastShotTime = 0;
+
+                    for (int i = 0; i < 4; i++)
+                    {
+                        weaponScript.Fire();
+                    }
+
                     weaponScript.Fire();
+                    weaponScript.ammo--;
                 }
             }
             else
@@ -30,6 +37,8 @@ public class WeaponManager : MonoBehaviour
                 {
                     lastShotTime = 0;
                     weaponScript.Fire();
+
+                    weaponScript.ammo--;
                 }
             }
 
@@ -39,7 +48,7 @@ public class WeaponManager : MonoBehaviour
             // Play empty mag sound or something 
         }
 
-        if (Input.GetButtonUp("Fire2"))
+        if (Input.GetButtonUp("DropWeapon"))
         {
             DropWeapon();
         }
