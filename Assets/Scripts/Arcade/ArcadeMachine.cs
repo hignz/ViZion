@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ArcadeMachine : MonoBehaviour {
 
@@ -8,6 +10,8 @@ public class ArcadeMachine : MonoBehaviour {
     SpriteRenderer spr;
 
     public bool isOn = false;
+
+    public Object gameToLoad;
 
 	void Start () {
         spr = GetComponent<SpriteRenderer>();
@@ -25,6 +29,7 @@ public class ArcadeMachine : MonoBehaviour {
                 if (isOn)
                 {
                     spr.sprite = turnedOn;
+                    StartCoroutine(LateCall());
                 }
                 else
                 {
@@ -33,4 +38,12 @@ public class ArcadeMachine : MonoBehaviour {
             }
         }
     }
+
+    IEnumerator LateCall()
+    {
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene(gameToLoad.name);
+    }
+
 }

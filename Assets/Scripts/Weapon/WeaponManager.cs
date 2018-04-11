@@ -10,6 +10,8 @@ public class WeaponManager : MonoBehaviour
 
     public TextMeshProUGUI ammoCount;
 
+    public AudioSource weaponPickupSound;
+
     void Update()
     {
         lastShotTime += Time.deltaTime;
@@ -69,6 +71,7 @@ public class WeaponManager : MonoBehaviour
             DropWeapon();
         }
 
+        weaponPickupSound.Play();
         currentWeapon = pickup;
         weaponScript = pickup.GetComponent<Weapon>();
 
