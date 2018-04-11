@@ -21,8 +21,6 @@ public class PauseScreen : MonoBehaviour {
             {
                 Pause();
             }
-
-            Debug.Log(GameIsPaused);
         }
     }
 
