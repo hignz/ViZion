@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 6e24e86dfe5c3c546b51f0afea82ed18
+timeCreated: 1523452784
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Star Avenue
+  fontNames:
+  - Star Avenue
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

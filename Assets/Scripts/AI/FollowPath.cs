@@ -43,12 +43,10 @@ public class FollowPath : MonoBehaviour
 
     void FaceDirection()
     {
-        Vector2 moveDirection = body.velocity;
+        Vector3 diff = new Vector3(target.x, target.y) - transform.position;
+        float angle = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
 
-        if (moveDirection != Vector2.zero)
-        {
-            transform.rotation = Quaternion.LookRotation(moveDirection, Vector3.forward);
-        }
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

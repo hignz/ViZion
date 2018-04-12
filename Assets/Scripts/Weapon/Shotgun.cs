@@ -14,9 +14,13 @@ public class Shotgun : Weapon {
 
     public override void Fire()
     {
+       var spread = UnityEngine.Random.Range(-10, 10);
+
         Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
         Vector2 firePos = new Vector2(firePoint.position.x, firePoint.position.y);
-        RaycastHit2D hit = Physics2D.Raycast(firePos, (mousePos - firePos), 100, whatToHit);
+
+
+        RaycastHit2D hit = Physics2D.Raycast(firePos, (mousePos - firePos) * spread, 100, whatToHit);
         Debug.DrawLine(firePos, (mousePos - firePos) * 100, Color.cyan, 4);
 
         GameObject bullet = (GameObject)GameObject.Instantiate(LineRendererPrefab, firePoint.position, firePoint.rotation);
@@ -41,7 +45,10 @@ public class Shotgun : Weapon {
         {
             case "Enemy":
                 Debug.Log("Hit enemy: " + hit.collider.tag);
-                Destroy(hit.collider.gameObject);
+                GameObject enemy = hit.collider.gameObject;
+                enemy.GetComponent<Enemy>().DoDeath();
+
+                //Destroy(hit.collider.gameObject);
                 break;
             default:
                 break;
