@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ArcadeAreaTest.unity
     guid: 7ca1ccb2c641a314f8ea3aa9fe451909
+  - enabled: 1
+    path: Assets/Scenes/ArcadeGame1.unity
+    guid: 032a583f57c15c449849475e62ae66a7

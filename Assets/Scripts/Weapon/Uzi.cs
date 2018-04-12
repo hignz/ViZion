@@ -38,7 +38,9 @@ public class Uzi : Weapon
         {
             case "Enemy":
                 Debug.Log("Hit enemy: " + hit.collider.tag);
-                Destroy(hit.collider.gameObject);
+                //Destroy(hit.collider.gameObject);
+                GameObject enemy = hit.collider.gameObject;
+                enemy.GetComponent<Enemy>().DoDeath();
                 break;
             default:
                 break;
