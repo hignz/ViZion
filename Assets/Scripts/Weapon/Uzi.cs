@@ -38,9 +38,9 @@ public class Uzi : Weapon
         {
             case "Enemy":
                 Debug.Log("Hit enemy: " + hit.collider.tag);
-                //Destroy(hit.collider.gameObject);
-                GameObject enemy = hit.collider.gameObject;
-                enemy.GetComponent<Enemy>().DoDeath();
+
+                hit.collider.gameObject.GetComponent<Enemy>().Die();
+                FindObjectOfType<LevelManager>().RemoveEnemy();
                 break;
             default:
                 break;
@@ -49,8 +49,7 @@ public class Uzi : Weapon
 
     public override void PlaySoundEffect()
     {
-        soundEffect.pitch = Random.Range(0.95f, 1.05f);
-        soundEffect.volume = UnityEngine.Random.Range(0.1f, soundEffect.volume);
+        soundEffect.pitch = Random.Range(0.94f, 1.05f);
         soundEffect.Play();
     }
 

@@ -18,7 +18,7 @@ public class WeaponManager : MonoBehaviour
 
         if (weaponScript != null && currentWeapon != null && weaponScript.ammo > 0)
         {
-            if (weaponScript.type == Weapon.WeaponType.SingleFire)
+            if (weaponScript.type == Weapon.WeaponType.Spread)
             {
                 if (Input.GetButtonDown("Fire1") && lastShotTime > weaponScript.fireRate)
                 {
@@ -29,7 +29,7 @@ public class WeaponManager : MonoBehaviour
                         weaponScript.Fire();
                     }
 
-                    weaponScript.Fire();
+                    //weaponScript.Fire();
                     weaponScript.ammo--;
                 }
             }
