@@ -49,8 +49,8 @@ public class Uzi : Weapon
 
     public override void PlaySoundEffect()
     {
-        soundEffect.pitch = Random.Range(0.94f, 1.05f);
-        soundEffect.Play();
+        gunShotSFX.pitch = Random.Range(0.94f, 1.05f);
+        gunShotSFX.Play();
     }
 
 }

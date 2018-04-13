@@ -9,12 +9,15 @@ public class Shotgun : Weapon
     private void Awake()
     {
         //fireRate = 1f;
-        type = WeaponType.Spread;
+        //type = WeaponType.Spread;
     }
 
-    private void Start()
+    public void Start()
     {
+        //AudioSource[] audios = GetComponents<AudioSource>();
 
+        //gunShotSFX = audios[0];
+        //reloadSFX = audios[1];
     }
 
     public override void Fire()
@@ -61,7 +64,7 @@ public class Shotgun : Weapon
 
     public override void PlaySoundEffect()
     {
-        soundEffect.pitch = UnityEngine.Random.Range(0.96f, 1.05f);
-        soundEffect.Play();
+        gunShotSFX.pitch = UnityEngine.Random.Range(0.96f, 1.05f);
+        gunShotSFX.Play();
     }
 }

@@ -19,7 +19,9 @@ public class Weapon : MonoBehaviour
 
     public LayerMask whatToHit;
 
-    public AudioSource soundEffect;
+    public AudioSource gunShotSFX;
+    public AudioSource reloadSFX;
+
 
     void Awake()
     {
