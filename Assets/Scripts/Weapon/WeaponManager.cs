@@ -6,48 +6,55 @@ public class WeaponManager : MonoBehaviour
     public GameObject currentWeapon;
     public Weapon weaponScript;
 
-    public float lastShotTime = 0;
+    private float lastShotTime = 0;
 
-    public TextMeshProUGUI ammoCount;
+    public TextMeshProUGUI ammoCountUI;
 
     public AudioSource weaponPickupSound;
+
+    public AudioSource emptyClipSFX;
 
     void Update()
     {
         lastShotTime += Time.deltaTime;
 
-        if (weaponScript != null && currentWeapon != null && weaponScript.ammo > 0)
+        if (weaponScript != null && currentWeapon != null)
         {
-            if (weaponScript.type == Weapon.WeaponType.Spread)
+            if (Input.GetButtonDown("Fire1") && weaponScript.type == Weapon.WeaponType.Spread && lastShotTime > weaponScript.fireRate)
             {
-                if (Input.GetButtonDown("Fire1") && lastShotTime > weaponScript.fireRate)
+                //if (Input.GetButtonDown("Fire1") && lastShotTime > weaponScript.fireRate)
+                //{
+                if (weaponScript.ammo <= 0)
                 {
-                    lastShotTime = 0;
-
-                    for (int i = 0; i < 4; i++)
-                    {
-                        weaponScript.Fire();
-                    }
-
-                    //weaponScript.Fire();
-                    weaponScript.ammo--;
+                    emptyClipSFX.Play();
+                    return;
                 }
-            }
-            else
-            {
-                if (Input.GetButton("Fire1") && lastShotTime > weaponScript.fireRate)
+
+                lastShotTime = 0;
+
+                for (int i = 0; i < 4; i++)
                 {
-                    lastShotTime = 0;
                     weaponScript.Fire();
-
-                    weaponScript.ammo--;
                 }
+
+                weaponScript.ammo--;
+                // }
+            }
+            else if (Input.GetButton("Fire1") && weaponScript.type == Weapon.WeaponType.AutoFire && lastShotTime > weaponScript.fireRate)
+            {
+                //if (Input.GetButton("Fire1") && lastShotTime > weaponScript.fireRate)
+                //{
+                lastShotTime = 0;
+                weaponScript.Fire();
+
+                weaponScript.ammo--;
+                // }
             }
 
         }
-        else
+        else if (weaponScript.ammo <= 0)
         {
-            // Play empty mag sound or something 
+            //emptyClipSFX.Play();
         }
 
         if (Input.GetButtonUp("DropWeapon"))
@@ -58,9 +65,9 @@ public class WeaponManager : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (ammoCount.IsActive())
+        if (ammoCountUI.IsActive())
         {
-            ammoCount.text = "" + weaponScript.ammo;
+            ammoCountUI.text = "" + weaponScript.ammo;
         }
     }
 
@@ -79,7 +86,7 @@ public class WeaponManager : MonoBehaviour
         currentWeapon.transform.localRotation = transform.localRotation;
         currentWeapon.transform.localPosition = new Vector3(0f, 0.02f, 0);
         //currentWeapon.SetActive(true);
-        ammoCount.gameObject.SetActive(true);
+        ammoCountUI.gameObject.SetActive(true);
 
         GetComponent<SpriteRenderer>().sprite = currentWeapon.GetComponent<SpriteRenderer>().sprite;
 
@@ -104,7 +111,7 @@ public class WeaponManager : MonoBehaviour
         //script.ammo = weaponScript.ammo;
         //weaponDrop.name = currentWeapon.name;
         //weaponDrop.SetActive(true);
-        ammoCount.gameObject.SetActive(false);
+        ammoCountUI.gameObject.SetActive(false);
 
         //Destroy(currentWeapon);
         currentWeapon = null;
