@@ -8,12 +8,7 @@ public class LevelManager : MonoBehaviour {
     {
         get
         {
-            return enemies.Length > 0;
-        }
-
-        set
-        {
-            EnemiesAlive = value;
+            return enemyCount > 0;
         }
     }
 
@@ -24,20 +19,19 @@ public class LevelManager : MonoBehaviour {
 
     public int score = 0;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    public int enemyCount = 0;
 
+    void Start ()
+    {
+        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+    }
+
+    void Update ()
+    {
         if (score >= 100)
         {
             scoreUI.text = "" + score;
         }
-
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         if (!EnemiesAlive) // Level complete
         {
@@ -45,6 +39,11 @@ public class LevelManager : MonoBehaviour {
             levelClearedUI.SetActive(true);
             StartCoroutine(LateCall());
         }
+    }
+
+    public void RemoveEnemy()
+    {
+        enemyCount--;
     }
 
     IEnumerator LateCall()

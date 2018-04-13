@@ -1,29 +1,33 @@
 ﻿using System;
 using UnityEngine;
 
-public class Shotgun : Weapon {
-
-    public GameObject LineRendererPrefab;
+public class Shotgun : Weapon
+{
+    public GameObject BulletLine;
     public float bulletSpread;
 
     private void Awake()
     {
         //fireRate = 1f;
-        type = WeaponType.SingleFire;
+        type = WeaponType.Spread;
+    }
+
+    private void Start()
+    {
+
     }
 
     public override void Fire()
     {
-       var spread = UnityEngine.Random.Range(-10, 10);
+        var spread = UnityEngine.Random.Range(-10f, 10f);
 
         Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
         Vector2 firePos = new Vector2(firePoint.position.x, firePoint.position.y);
 
-
-        RaycastHit2D hit = Physics2D.Raycast(firePos, (mousePos - firePos) * spread, 100, whatToHit);
+        RaycastHit2D hit = Physics2D.Raycast(firePos, (mousePos - firePos), 100, whatToHit);
         Debug.DrawLine(firePos, (mousePos - firePos) * 100, Color.cyan, 4);
 
-        GameObject bullet = (GameObject)GameObject.Instantiate(LineRendererPrefab, firePoint.position, firePoint.rotation);
+        GameObject bullet = (GameObject)GameObject.Instantiate(BulletLine, firePoint.position, firePoint.rotation);
         bullet.transform.Rotate(0, 0, UnityEngine.Random.Range(-10, 10));
 
         PlaySoundEffect();
@@ -45,10 +49,10 @@ public class Shotgun : Weapon {
         {
             case "Enemy":
                 Debug.Log("Hit enemy: " + hit.collider.tag);
-                GameObject enemy = hit.collider.gameObject;
-                enemy.GetComponent<Enemy>().DoDeath();
 
-                //Destroy(hit.collider.gameObject);
+                hit.collider.gameObject.GetComponent<Enemy>().Die();
+
+                FindObjectOfType<LevelManager>().RemoveEnemy();
                 break;
             default:
                 break;
@@ -58,7 +62,6 @@ public class Shotgun : Weapon {
     public override void PlaySoundEffect()
     {
         soundEffect.pitch = UnityEngine.Random.Range(0.96f, 1.05f);
-        soundEffect.volume = UnityEngine.Random.Range(0.9f, soundEffect.volume);
         soundEffect.Play();
     }
 }
