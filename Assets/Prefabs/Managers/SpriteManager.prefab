@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1613135499050322}
+  m_IsPrefabParent: 1
+--- !u!1 &1613135499050322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4842022803692236}
+  - component: {fileID: 114593216310500924}
+  m_Layer: 0
+  m_Name: SpriteManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4842022803692236
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1613135499050322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.771481, y: -3.468482, z: -0.0078125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114593216310500924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1613135499050322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bd0e2f06b1958c49ba6b2fd05e1260d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSprites:
+  - {fileID: 1899012699517614, guid: d24c574c0deaa2441ba30d172291d1f6, type: 2}
+  - {fileID: 1566741197757410, guid: a1ef65b11cbd9624d87f0cae23bcf7de, type: 2}
+  - {fileID: 1375809208460806, guid: 26ba90945a1cadc4aa00261790618589, type: 2}
+  - {fileID: 1186322600398096, guid: 3dcde7c030843b04e8b10eb1257a3d5c, type: 2}
+  - {fileID: 1782861161472848, guid: b4a896e6fe6f66a47956c1bc9c0933f7, type: 2}
+  - {fileID: 1688159455322682, guid: ba782cfe2a59b054a8329424eee491e2, type: 2}
+  - {fileID: 1652846828961236, guid: 03364c9b8b0086b4984c6160b81f2bc7, type: 2}
+  - {fileID: 1281194134279198, guid: 3fcbc7e2ec89f79419911865432a55bb, type: 2}
+  - {fileID: 1288440721459676, guid: a27d14ad68803964ca71d4f02dd522da, type: 2}
+  - {fileID: 1600284523484666, guid: e200b9abfb747304bafcfcd4a8fdc991, type: 2}
+  - {fileID: 1266724130226194, guid: 557496af75a985948b09c4cd1e491202, type: 2}
+  - {fileID: 1879397002250952, guid: d3068bacfff82064fa446991573dfe23, type: 2}
+  - {fileID: 1871584527667290, guid: 7d29e98bdd780a7409af9fd2e89282d8, type: 2}
+  - {fileID: 1192226080847848, guid: f51a5212a27a0a44ba1d263a5245d1a4, type: 2}
+  - {fileID: 1086152524930152, guid: c6bb6c0d9754bae4e9c210876e34a2a5, type: 2}
+  - {fileID: 1191729175929156, guid: db8d076549fb7bd42b951d63b4e86cff, type: 2}
+  - {fileID: 1494632475077658, guid: 9815d4b5a0796ce4086979e64da58658, type: 2}
+  - {fileID: 1041770792736222, guid: 3b4de86323e8c0948b5dcba5c5cded86, type: 2}
+  bloodSprites:
+  - {fileID: 1938092138174702, guid: c45ca2d91c7eb564e9fc4fa4286594ac, type: 2}
+  - {fileID: 1264965762659134, guid: 46141c01c1f1aa240817c8ae12103f19, type: 2}
+  - {fileID: 1598476060791122, guid: e9bcb9a24aa86ae4681077e4c3bdaf4c, type: 2}
+  - {fileID: 1157957537551540, guid: c108580736c30c94b90e6d8c7581299d, type: 2}
+  - {fileID: 1473091275429208, guid: c1c736cfa17fc0c45ae33dba648b0389, type: 2}
+  - {fileID: 1925612681626136, guid: ae5aada6abead504f9938a093b8cfffb, type: 2}
+  - {fileID: 1315149699880468, guid: fa29d3dd5be91774dafe1e442b5a1d5a, type: 2}
