@@ -18,44 +18,81 @@ public class WeaponManager : MonoBehaviour
     {
         lastShotTime += Time.deltaTime;
 
-        if (weaponScript != null && currentWeapon != null)
+        if (currentWeapon != null && weaponScript.ammo > 0)
         {
-            if (Input.GetButtonDown("Fire1") && weaponScript.type == Weapon.WeaponType.Spread && lastShotTime > weaponScript.fireRate)
+            switch (weaponScript.type)
             {
-                //if (Input.GetButtonDown("Fire1") && lastShotTime > weaponScript.fireRate)
-                //{
-                if (weaponScript.ammo <= 0)
-                {
-                    emptyClipSFX.Play();
-                    return;
-                }
+                case Weapon.WeaponType.Spread:
+                    if (Input.GetButtonDown("Fire1") && lastShotTime > weaponScript.fireRate)
+                    {
+                        lastShotTime = 0;
 
-                lastShotTime = 0;
+                        for (int i = 0; i < 4; i++)
+                        {
+                            weaponScript.Fire();
+                        }
 
-                for (int i = 0; i < 4; i++)
-                {
-                    weaponScript.Fire();
-                }
+                        weaponScript.ammo--;
+                    }
+                    break;
+                case Weapon.WeaponType.AutoFire:
+                    if (Input.GetButton("Fire1") && lastShotTime > weaponScript.fireRate)
+                    {
+                        lastShotTime = 0;
+                        weaponScript.Fire();
 
-                weaponScript.ammo--;
-                // }
+                        weaponScript.ammo--;
+                    }
+                    break;
+                case Weapon.WeaponType.SingleFire:
+
+                    break;
+                default:
+
+                    break;
             }
-            else if (Input.GetButton("Fire1") && weaponScript.type == Weapon.WeaponType.AutoFire && lastShotTime > weaponScript.fireRate)
-            {
-                //if (Input.GetButton("Fire1") && lastShotTime > weaponScript.fireRate)
-                //{
-                lastShotTime = 0;
-                weaponScript.Fire();
-
-                weaponScript.ammo--;
-                // }
-            }
-
         }
-        else if (weaponScript.ammo <= 0)
+        else if(currentWeapon != null && weaponScript.ammo <= 0 && Input.GetButtonDown("Fire1"))
         {
-            //emptyClipSFX.Play();
+            emptyClipSFX.Play();
         }
+
+        //    if (Input.GetButtonDown("Fire1") && weaponScript.type == Weapon.WeaponType.Spread && lastShotTime > weaponScript.fireRate)
+        //    {
+        //        //if (Input.GetButtonDown("Fire1") && lastShotTime > weaponScript.fireRate)
+        //        //{
+        //        if (weaponScript.ammo <= 0)
+        //        {
+        //            emptyClipSFX.Play();
+        //            return;
+        //        }
+
+        //        lastShotTime = 0;
+
+        //        for (int i = 0; i < 4; i++)
+        //        {
+        //            weaponScript.Fire();
+        //        }
+
+        //        weaponScript.ammo--;
+        //        // }
+        //    }
+        //    else if (Input.GetButton("Fire1") && weaponScript.type == Weapon.WeaponType.AutoFire && lastShotTime > weaponScript.fireRate)
+        //    {
+        //        //if (Input.GetButton("Fire1") && lastShotTime > weaponScript.fireRate)
+        //        //{
+        //        lastShotTime = 0;
+        //        weaponScript.Fire();
+
+        //        weaponScript.ammo--;
+        //        // }
+        //    }
+
+        //}
+        //else if (weaponScript.ammo <= 0)
+        //{
+        //    //emptyClipSFX.Play();
+        //}
 
         if (Input.GetButtonUp("DropWeapon"))
         {
@@ -85,8 +122,8 @@ public class WeaponManager : MonoBehaviour
         currentWeapon.transform.parent = this.transform;
         currentWeapon.transform.localRotation = transform.localRotation;
         currentWeapon.transform.localPosition = new Vector3(0f, 0.02f, 0);
-        //currentWeapon.SetActive(true);
         ammoCountUI.gameObject.SetActive(true);
+        GetComponentInParent<Player>().SwapToEquipSprite();
 
         GetComponent<SpriteRenderer>().sprite = currentWeapon.GetComponent<SpriteRenderer>().sprite;
 
@@ -105,15 +142,10 @@ public class WeaponManager : MonoBehaviour
         currentWeapon.transform.position = pos;
         currentWeapon.transform.localScale = new Vector3(1f, 1f, 1);
         currentWeapon.SetActive(true);
-        //GameObject weaponDrop = Instantiate<GameObject>(currentWeapon, pos, transform.rotation);
-        //Weapon script = weaponDrop.GetComponent<Weapon>();
-
-        //script.ammo = weaponScript.ammo;
-        //weaponDrop.name = currentWeapon.name;
-        //weaponDrop.SetActive(true);
         ammoCountUI.gameObject.SetActive(false);
+        GetComponentInParent<Player>().SwapToUnequippedSprite();
 
-        //Destroy(currentWeapon);
+
         currentWeapon = null;
         weaponScript = null;
         GetComponent<SpriteRenderer>().sprite = null;
