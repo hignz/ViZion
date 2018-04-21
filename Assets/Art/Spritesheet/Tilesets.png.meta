@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a1f8fa5d8cb407549ad00c6bf043ce2f
-timeCreated: 1523294142
+timeCreated: 1524091369
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -136,7 +136,7 @@ TextureImporter:
     21300258: BqX1wYx_129
     21300260: BqX1wYx_130
     21300262: BqX1wYx_131
-    21300264: BqX1wYx_132
+    21300264: conc
     21300266: BqX1wYx_133
     21300268: BqX1wYx_134
     21300270: BqX1wYx_135
@@ -639,13 +639,13 @@ TextureImporter:
     21301264: BqX1wYx_632
     21301266: BqX1wYx_633
     21301268: BqX1wYx_634
-    21301270: BqX1wYx_635
+    21301270: redmix
     21301272: BqX1wYx_636
     21301274: BqX1wYx_637
     21301276: BqX1wYx_638
     21301278: BqX1wYx_639
     21301280: BqX1wYx_640
-    21301282: BqX1wYx_641
+    21301282: darkredmix
     21301284: BqX1wYx_642
     21301286: BqX1wYx_643
     21301288: BqX1wYx_644
@@ -1376,9 +1376,9 @@ TextureImporter:
     21302738: BqX1wYx_1369
     21302740: BqX1wYx_1370
     21302742: BqX1wYx_1371
-    21302744: BqX1wYx_1372
-    21302746: BqX1wYx_1373
-    21302748: BqX1wYx_1374
+    21302744: ground1
+    21302746: ground2
+    21302748: ground3
     21302750: BqX1wYx_1375
     21302752: BqX1wYx_1376
     21302754: BqX1wYx_1377
@@ -1386,9 +1386,9 @@ TextureImporter:
     21302758: BqX1wYx_1379
     21302760: BqX1wYx_1380
     21302762: BqX1wYx_1381
-    21302764: BqX1wYx_1382
-    21302766: BqX1wYx_1383
-    21302768: BqX1wYx_1384
+    21302764: ground4
+    21302766: ground5
+    21302768: ground6
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -1450,7 +1450,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -1460,7 +1459,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3313,7 +3311,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BqX1wYx_132
+      name: conc
       rect:
         serializedVersion: 2
         x: 752
@@ -10355,7 +10353,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BqX1wYx_635
+      name: redmix
       rect:
         serializedVersion: 2
         x: 352
@@ -10439,7 +10437,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BqX1wYx_641
+      name: darkredmix
       rect:
         serializedVersion: 2
         x: 448
@@ -20673,7 +20671,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BqX1wYx_1372
+      name: ground1
       rect:
         serializedVersion: 2
         x: 688
@@ -20687,7 +20685,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BqX1wYx_1373
+      name: ground2
       rect:
         serializedVersion: 2
         x: 704
@@ -20701,7 +20699,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BqX1wYx_1374
+      name: ground3
       rect:
         serializedVersion: 2
         x: 720
@@ -20813,7 +20811,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BqX1wYx_1382
+      name: ground4
       rect:
         serializedVersion: 2
         x: 688
@@ -20827,7 +20825,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BqX1wYx_1383
+      name: ground5
       rect:
         serializedVersion: 2
         x: 704
@@ -20841,7 +20839,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BqX1wYx_1384
+      name: ground6
       rect:
         serializedVersion: 2
         x: 720

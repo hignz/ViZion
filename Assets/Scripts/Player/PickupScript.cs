@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class PickupScript : MonoBehaviour {
 
     public GameObject pickupInRange = null;
+    public TextMeshProUGUI pickupText;
 
     void Update()
     {
@@ -18,6 +20,8 @@ public class PickupScript : MonoBehaviour {
         if (collision.CompareTag("Pickup"))
         {
             pickupInRange = collision.gameObject;
+            Debug.Log(collision.gameObject.name);
+            pickupText.text = "RMB to pickup " + collision.gameObject.name;
         }
     }
 
@@ -28,6 +32,7 @@ public class PickupScript : MonoBehaviour {
             if (collision.gameObject == pickupInRange)
             {
                 pickupInRange = null;
+                pickupText.text = "";
             }
         }
     }

@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour {
 
     public Sprite equip, unequipped;
+   
+    
 
     void Start () {
 		 
 	}
 	
 	void Update () {
-		
+
+        
 	}
 
     public void SwapToEquipSprite()
@@ -21,5 +25,4 @@ public class Player : MonoBehaviour {
     {
         GetComponent<SpriteRenderer>().sprite = unequipped;
     }
-
 }
