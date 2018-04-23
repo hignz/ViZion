@@ -2,15 +2,17 @@
 
 public class CameraFollow : MonoBehaviour
 {
+    public Camera myCamera;
+    GameObject[] ObjectList = null;
+    int index = 0;
 
-    public Camera chopperCamera;
-    public Camera playerCamera;
+    public Vector3 destinationPos = new Vector3(-72.16f, 4.67f, 0f);
 
     [SerializeField]
-    public Transform chopper;
+    private Transform target;
 
-    public GameObject playerToSpawn;
-    Vector2 startPos = new Vector2(-69.57f, -1.41f);
+    [SerializeField]
+    public GameObject player;
 
     [SerializeField]
     private bool restrictCamera = false;
@@ -28,17 +30,22 @@ public class CameraFollow : MonoBehaviour
     private float yMax;
 
     [SerializeField]
-    private Transform target;
-
-    [SerializeField]
     public Vector3 offset;
-
-
 
     private void Start()
     {
-        chopperCamera.gameObject.SetActive(true);
-        playerCamera.gameObject.SetActive(false);
+        myCamera.orthographicSize = 12;
+        player.gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (target.position == destinationPos)
+        {
+            findNext();
+            myCamera.orthographicSize = 3.5f;
+            player.gameObject.SetActive(true);
+        }
     }
 
     void LateUpdate()
@@ -51,17 +58,22 @@ public class CameraFollow : MonoBehaviour
         {
             transform.position = new Vector3(target.transform.position.x + offset.x, target.transform.position.y + offset.y, transform.position.z);
         }
-        playerCamera.gameObject.SetActive(true);
-        chopperCamera.gameObject.SetActive(false);
+    }
+    
+    void Awake()
+    {
+        ObjectList = GameObject.FindGameObjectsWithTag("Player");
+    }
+    
+    void findNext()
+    {
+        index++;
+        if (index >= ObjectList.Length)
+        {
+            index = 0;
+        }
+        target = ObjectList[index].transform;
+
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "chopper")
-        {
-            GameObject newPlayerToSpawn = Instantiate(playerToSpawn);
-            GameObject.Find("Player(Clone)").transform.position = startPos;
-            
-        }
-    }
 }

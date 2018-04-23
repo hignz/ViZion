@@ -10,8 +10,7 @@ public class AttackInRange : MonoBehaviour
 
     void Update()
     {
-        if (Vector2.Distance(
-            transform.position, ObjectToTrack.transform.position) <= TrackingRange)
+        if (Vector2.Distance(transform.position, ObjectToTrack.transform.position) <= TrackingRange)
         {
             isTracking = true;
         }
