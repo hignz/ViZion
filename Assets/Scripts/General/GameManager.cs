@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public int playerPoints;
+    public int playerPoints = 0;
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -15,4 +20,9 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void AddPlayerPoints(int i)
+    {
+        playerPoints += i;
+    }
 }
