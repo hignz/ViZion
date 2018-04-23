@@ -16,6 +16,8 @@ TagManager:
   - Door
   - Chicken
   - dialogueTrigger
+  - playerSpawner
+  - chopper
   layers:
   - Default
   - TransparentFX

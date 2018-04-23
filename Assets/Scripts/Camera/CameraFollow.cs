@@ -2,9 +2,17 @@
 
 public class CameraFollow : MonoBehaviour
 {
+    public Camera myCamera;
+    GameObject[] ObjectList = null;
+    int index = 0;
 
-    public Camera chopperCamera;
-    public Camera playerCamera;
+    public Vector3 destinationPos = new Vector3(-72.16f, 4.67f, 0f);
+
+    [SerializeField]
+    private Transform target;
+
+    [SerializeField]
+    public GameObject player;
 
     [SerializeField]
     private bool restrictCamera = false;
@@ -22,25 +30,21 @@ public class CameraFollow : MonoBehaviour
     private float yMax;
 
     [SerializeField]
-    private Transform target;
-
-    [SerializeField]
     public Vector3 offset;
-
-    public Vector3 destinationPos = new Vector3(-70.26323f, 2.523464f, -0.1054688f);
 
     private void Start()
     {
-        chopperCamera.gameObject.SetActive(true);
-        playerCamera.gameObject.SetActive(false);
+        myCamera.orthographicSize = 12;
+        player.gameObject.SetActive(false);
     }
 
-    private void Update()
-    {  
+    void Update()
+    {
         if (target.position == destinationPos)
         {
-            playerCamera.gameObject.SetActive(true);
-            chopperCamera.gameObject.SetActive(false);
+            findNext();
+            myCamera.orthographicSize = 3.5f;
+            player.gameObject.SetActive(true);
         }
     }
 
@@ -55,4 +59,21 @@ public class CameraFollow : MonoBehaviour
             transform.position = new Vector3(target.transform.position.x + offset.x, target.transform.position.y + offset.y, transform.position.z);
         }
     }
+    
+    void Awake()
+    {
+        ObjectList = GameObject.FindGameObjectsWithTag("Player");
+    }
+    
+    void findNext()
+    {
+        index++;
+        if (index >= ObjectList.Length)
+        {
+            index = 0;
+        }
+        target = ObjectList[index].transform;
+
+    }
+
 }
