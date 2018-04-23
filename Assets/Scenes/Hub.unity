@@ -512,6 +512,26 @@ Prefab:
       propertyPath: InitialModule.startLifetime.minScalar
       value: 0.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198028131253201278, guid: 08ce9a65f40c8ff4080d2b86aeb16d91,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198028131253201278, guid: 08ce9a65f40c8ff4080d2b86aeb16d91,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198028131253201278, guid: 08ce9a65f40c8ff4080d2b86aeb16d91,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198028131253201278, guid: 08ce9a65f40c8ff4080d2b86aeb16d91,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08ce9a65f40c8ff4080d2b86aeb16d91, type: 2}
   m_IsPrefabParent: 0
@@ -603,6 +623,10 @@ Prefab:
         type: 2}
       propertyPath: maxSpeed
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443942521870382, guid: 77adcd7eaa581f242bde591b99fc2f9c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77adcd7eaa581f242bde591b99fc2f9c, type: 2}
@@ -1085,7 +1109,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4582198120736800, guid: b4e675a5c49920748989306a44857061, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 756
+      value: 452
       objectReference: {fileID: 0}
     - target: {fileID: 4582198120736800, guid: b4e675a5c49920748989306a44857061, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1354,6 +1378,12 @@ Prefab:
       propertyPath: rotationSpeed
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 114521006826964056, guid: cc83a369918e7364cb4f7ccd2d6544e0,
+        type: 2}
+      propertyPath: level
+      value: 
+      objectReference: {fileID: 102900000, guid: 6ac4bc6d2e8b9be48a509f5b5e81c4f9,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc83a369918e7364cb4f7ccd2d6544e0, type: 2}
   m_IsPrefabParent: 0
@@ -1942,7 +1972,6 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -1971,6 +2000,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6aa8c8bd842140bd5245f2295af50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chopperCamera: {fileID: 0}
+  playerCamera: {fileID: 0}
   restrictCamera: 1
   xMin: -1839
   yMin: -2000
@@ -1978,6 +2009,7 @@ MonoBehaviour:
   yMax: 1777
   target: {fileID: 2137380990}
   offset: {x: 0, y: 0, z: 0}
+  destinationPos: {x: -70.26323, y: 2.523464, z: -0.1054688}
 --- !u!82 &1441928394
 AudioSource:
   m_ObjectHideFlags: 0
