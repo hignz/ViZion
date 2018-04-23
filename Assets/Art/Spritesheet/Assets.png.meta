@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e2a33d67f437b3340ae62c1b63caf6ba
-timeCreated: 1524423726
+timeCreated: 1524509460
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -246,7 +246,7 @@ TextureImporter:
     21300478: Assets_239
     21300480: Assets_240
     21300482: Assets_241
-    21300484: Assets_242
+    21300484: computer
     21300486: Assets_243
     21300488: Assets_244
     21300490: Assets_245
@@ -254,7 +254,7 @@ TextureImporter:
     21300494: jailLikeFloor
     21300496: Assets_248
     21300498: Assets_249
-    21300500: Assets_250
+    21300500: toolBoxx
     21300502: Assets_251
     21300504: Assets_252
     21300506: Assets_253
@@ -275,7 +275,7 @@ TextureImporter:
     21300536: Assets_268
     21300538: Assets_269
     21300540: Assets_270
-    21300542: Assets_271
+    21300542: Kitchen_Furniture
     21300544: Assets_272
     21300546: Assets_273
     21300548: Assets_274
@@ -586,6 +586,7 @@ TextureImporter:
     21301158: Assets_579
     21301160: Assets_580
     21301162: lightbrown_tile
+    21301164: toiletBath
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -4034,7 +4035,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Assets_242
+      name: computer
       rect:
         serializedVersion: 2
         x: 792
@@ -4146,7 +4147,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Assets_250
+      name: toolBoxx
       rect:
         serializedVersion: 2
         x: 692
@@ -4440,10 +4441,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Assets_271
+      name: Kitchen_Furniture
       rect:
         serializedVersion: 2
-        x: 130
+        x: 129
         y: 120
         width: 59
         height: 171
@@ -8803,6 +8804,20 @@ TextureImporter:
         height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: toiletBath
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 546
+        width: 87
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

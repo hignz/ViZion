@@ -7,6 +7,12 @@ public class CameraFollow : MonoBehaviour
     public Camera playerCamera;
 
     [SerializeField]
+    public Transform chopper;
+
+    public GameObject playerToSpawn;
+    Vector2 startPos = new Vector2(-69.57f, -1.41f);
+
+    [SerializeField]
     private bool restrictCamera = false;
 
     [SerializeField]
@@ -27,21 +33,12 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     public Vector3 offset;
 
-    public Vector3 destinationPos = new Vector3(-70.26323f, 2.523464f, -0.1054688f);
+
 
     private void Start()
     {
         chopperCamera.gameObject.SetActive(true);
         playerCamera.gameObject.SetActive(false);
-    }
-
-    private void Update()
-    {  
-        if (target.position == destinationPos)
-        {
-            playerCamera.gameObject.SetActive(true);
-            chopperCamera.gameObject.SetActive(false);
-        }
     }
 
     void LateUpdate()
@@ -53,6 +50,18 @@ public class CameraFollow : MonoBehaviour
         else
         {
             transform.position = new Vector3(target.transform.position.x + offset.x, target.transform.position.y + offset.y, transform.position.z);
+        }
+        playerCamera.gameObject.SetActive(true);
+        chopperCamera.gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "chopper")
+        {
+            GameObject newPlayerToSpawn = Instantiate(playerToSpawn);
+            GameObject.Find("Player(Clone)").transform.position = startPos;
+            
         }
     }
 }
