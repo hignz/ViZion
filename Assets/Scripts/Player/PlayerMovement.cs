@@ -5,6 +5,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed;
 
+    public bool moving = false;
+
     private Rigidbody2D rb2d;
 
     private Vector2 direction;
@@ -77,26 +79,34 @@ public class PlayerMovement : MonoBehaviour
 
     void GetInput()
     {
+        
         direction = Vector2.zero;
 
         if (Input.GetAxisRaw("Vertical") > 0)
         {
             direction += Vector2.up;
+            moving = true;
         }
 
         if (Input.GetAxisRaw("Vertical") < 0)
         {
             direction += Vector2.down;
+            moving = true;
         }
 
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
             direction += Vector2.right;
+            moving = true;
         }
+
 
         if (Input.GetAxisRaw("Horizontal") < 0)
         {
             direction += Vector2.left;
+            moving = true;
         }
+
+        
     }
 }
