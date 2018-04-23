@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ArcadeGame1.unity
     guid: 032a583f57c15c449849475e62ae66a7
+  - enabled: 1
+    path: Assets/Scenes/ibrah_scene.unity
+    guid: 6ac4bc6d2e8b9be48a509f5b5e81c4f9

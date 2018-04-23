@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e2a33d67f437b3340ae62c1b63caf6ba
-timeCreated: 1524327753
+timeCreated: 1524423726
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -251,7 +251,7 @@ TextureImporter:
     21300488: Assets_244
     21300490: Assets_245
     21300492: Assets_246
-    21300494: Assets_247
+    21300494: jailLikeFloor
     21300496: Assets_248
     21300498: Assets_249
     21300500: Assets_250
@@ -4104,7 +4104,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Assets_247
+      name: jailLikeFloor
       rect:
         serializedVersion: 2
         x: 539

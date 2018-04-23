@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class CutsceneDisplay : MonoBehaviour
 {
@@ -85,7 +86,7 @@ public class CutsceneDisplay : MonoBehaviour
 		if (display == true) {
 			GUI.DrawTexture (new Rect (0, 0, originalWidth, originalHeight), bg);
 			GUI.DrawTexture (new Rect (originalWidth - 500, originalHeight / 2-400, 500, 500), activeFace);
-			GUI.Box (new Rect (originalWidth / 2-500, originalHeight - 150, 1000, 100), activeCutscene.Text,text);
+			GUI.Box (new Rect (originalWidth / 2-500, originalHeight - 150, 1000, 100), activeCutscene.text, text);
 		}
 		GUI.matrix = svMat;
 	}

@@ -15,6 +15,7 @@ TagManager:
   - PathNode
   - Door
   - Chicken
+  - dialogueTrigger
   layers:
   - Default
   - TransparentFX
