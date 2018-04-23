@@ -32,7 +32,7 @@ public class PickupScript : MonoBehaviour {
             if (collision.gameObject == pickupInRange)
             {
                 pickupInRange = null;
-                pickupText.text = "";
+                pickupText.text = string.Empty;
             }
         }
     }
