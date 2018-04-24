@@ -40,7 +40,7 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
-        if (target.position == destinationPos)
+        if (target.position == destinationPos && myCamera != null)
         {
             findNext();
             myCamera.orthographicSize = 3.5f;

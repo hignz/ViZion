@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1030121908874678}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.31, y: 0.02, z: 0}
+  m_LocalPosition: {x: 0.34, y: -0.001, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 4686074883675076}
@@ -64,14 +64,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088286475097558}
-  m_LocalRotation: {x: -0, y: -0, z: 0.6028526, w: 0.79785264}
-  m_LocalPosition: {x: 14.91, y: -3.43, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.78164536, w: 0.62372315}
+  m_LocalPosition: {x: 1.17, y: -3.29, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children:
   - {fileID: 4581036034795886}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 74.149}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -102.823006}
 --- !u!58 &58963792963209698
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -98,17 +98,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a1fe4d90be68f45b818c36cb1a8402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  ammo: 100
+  damage: 10
+  ammo: 12
   fireRate: 1
   firePoint: {fileID: 4581036034795886}
-  type: 0
+  type: 2
   whatToHit:
     serializedVersion: 2
     m_Bits: 13312
-  soundEffect: {fileID: 0}
-  LineRendererPrefab: {fileID: 1698527231664026, guid: e9ca2896a70452441a44098e29b36127,
-    type: 2}
+  gunShotSFX: {fileID: 0}
+  reloadSFX: {fileID: 0}
+  BulletLine: {fileID: 1698527231664026, guid: e9ca2896a70452441a44098e29b36127, type: 2}
   bulletSpread: 9
 --- !u!114 &114541943337201772
 MonoBehaviour:
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1030121908874678}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bef0278bddfbed34e833fac32ec67a9a, type: 3}
   m_Name: 
