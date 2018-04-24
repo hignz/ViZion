@@ -8,13 +8,13 @@ public class AttackInRange : MonoBehaviour
     public float TrackingRange = 5;
     private bool isTracking = false;
     public GameObject BulletLine;
-    public FollowPath fp;
+    FollowPath path;
     public LayerMask whatEnemyCantSeeThrough;
     public LayerMask whatToHit;
 
     private void Start()
     {
-        fp = GetComponent<FollowPath>();
+        path = GetComponent<FollowPath>();
     }
 
     void Update()
@@ -22,12 +22,12 @@ public class AttackInRange : MonoBehaviour
         if (Vector2.Distance(transform.position, ObjectToTrack.transform.position) <= TrackingRange && !Physics2D.Linecast(transform.position, ObjectToTrack.transform.position, whatToHit))
         {
             isTracking = true;
-            fp.doMove = false;
+            path.doMove = false;
             Shoot(ObjectToTrack.transform);
         }
         else
         {
-            fp.doMove = true;
+            path.doMove = true;
             isTracking = false;
         }
     }
