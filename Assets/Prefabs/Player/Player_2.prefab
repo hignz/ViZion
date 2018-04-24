@@ -325,6 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equip: {fileID: 21300308, guid: 91541df6ebad60a4d811364e90335c50, type: 3}
   unequipped: {fileID: 21300018, guid: 91541df6ebad60a4d811364e90335c50, type: 3}
+  pickupText: {fileID: 0}
 --- !u!114 &114649573858821270
 MonoBehaviour:
   m_ObjectHideFlags: 1

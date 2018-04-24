@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4055967701516530}
   - component: {fileID: 212167998660655868}
   - component: {fileID: 61918962091809934}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpritesheetTest999_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1292217242695956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.41379997, y: 0.75299996, z: 0}
+  m_LocalPosition: {x: 1.2620001, y: -0.7870001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,7 +97,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300004, guid: caedff4408568d046b3086182311ec76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
