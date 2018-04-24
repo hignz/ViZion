@@ -21,7 +21,7 @@ public class PickupScript : MonoBehaviour {
         {
             pickupInRange = collision.gameObject;
             Debug.Log(collision.gameObject.name);
-            pickupText.text = "RMB to pickup " + collision.gameObject.name;
+            //pickupText.text = "RMB to pickup " + collision.gameObject.name;
         }
     }
 
@@ -32,7 +32,7 @@ public class PickupScript : MonoBehaviour {
             if (collision.gameObject == pickupInRange)
             {
                 pickupInRange = null;
-                pickupText.text = string.Empty;
+                //pickupText.text = string.Empty;
             }
         }
     }

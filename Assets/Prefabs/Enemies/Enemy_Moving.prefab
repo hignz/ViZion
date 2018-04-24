@@ -24,13 +24,43 @@ GameObject:
   - component: {fileID: 61641068811894772}
   - component: {fileID: 114490222351106508}
   - component: {fileID: 114631214910006232}
+  - component: {fileID: 114410203326838512}
   m_Layer: 12
   m_Name: Enemy_Moving
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1700469027883104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4468072844655738}
+  - component: {fileID: 114356928793521102}
+  m_Layer: 12
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4468072844655738
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1700469027883104}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.44, y: -0.16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4602461911821594}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4602461911821594
 Transform:
   m_ObjectHideFlags: 1
@@ -40,7 +70,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0.9997739, w: 0.02126315}
   m_LocalPosition: {x: 0.27, y: 2.7, z: 0.019616745}
   m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4468072844655738}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -177.563}
@@ -89,6 +120,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4192748, y: 0.7870219}
   m_EdgeRadius: 0
+--- !u!114 &114356928793521102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1700469027883104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef0278bddfbed34e833fac32ec67a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114410203326838512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1221280958747946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 361084afc61565c4a88be9278c8f729b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToTrack: {fileID: 0}
+  TrackingRange: 4.29
+  BulletLine: {fileID: 1698527231664026, guid: 9d7829abe5e9ba545a9b3fc1e76c6ed4, type: 2}
+  whatToHit:
+    serializedVersion: 2
+    m_Bits: 9216
 --- !u!114 &114490222351106508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doMove: 1
-  moveSpeed: 2.21
+  moveSpeed: 4
   distanceToNodeTolerance: 0.2
   Path: {fileID: 0}
   target: {x: 0, y: 0}

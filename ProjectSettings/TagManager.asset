@@ -18,6 +18,7 @@ TagManager:
   - dialogueTrigger
   - playerSpawner
   - chopper
+  - Prop
   layers:
   - Default
   - TransparentFX

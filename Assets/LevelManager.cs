@@ -28,6 +28,8 @@ public class LevelManager : MonoBehaviour {
     void Start ()
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
+        Debug.Log(enemyCount);
     }
 
     void Update ()

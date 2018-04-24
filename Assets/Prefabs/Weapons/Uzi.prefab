@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212806013708569946}
   - component: {fileID: 58213088163175140}
   - component: {fileID: 114250165830916398}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Uzi
   m_TagString: Pickup
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4488585035393418}
   - component: {fileID: 114478485941055726}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,8 +64,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1078535388995474}
-  m_LocalRotation: {x: -0, y: -0, z: -0.533809, w: 0.84560513}
-  m_LocalPosition: {x: 4.6642923, y: -3.4390044, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.883, y: -4.229, z: 0}
   m_LocalScale: {x: 1.2000004, y: 1.2000004, z: 1}
   m_Children:
   - {fileID: 4488585035393418}
@@ -98,16 +98,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 294a617fbd465ef44a8101dbd952ed5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 10000
   ammo: 32
-  fireRate: 0.05
+  fireRate: 0.06
   firePoint: {fileID: 4488585035393418}
   type: 1
-  notToHit:
+  whatToHit:
     serializedVersion: 2
-    m_Bits: 800
-  soundEffect: {fileID: 0}
-  LineRendererPrefab: {fileID: 4733165814704250, guid: c12b41b090532554db71a54d9cc8ec14,
+    m_Bits: 13312
+  gunShotSFX: {fileID: 0}
+  reloadSFX: {fileID: 0}
+  LineRendererPrefab: {fileID: 4419451935091828, guid: e9ca2896a70452441a44098e29b36127,
     type: 2}
 --- !u!114 &114478485941055726
 MonoBehaviour:

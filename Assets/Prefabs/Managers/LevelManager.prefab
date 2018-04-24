@@ -79,7 +79,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4089894351764796
 Transform:
   m_ObjectHideFlags: 1
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -244,13 +244,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 32.7
+  m_fontSizeBase: 32
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontStyle: 3
   m_textAlignment: 514
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_firstOverflowCharacterIndex: -1
@@ -289,7 +289,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 1
@@ -337,9 +337,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994b10512150f154c9caef387052252c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escapeVehicle: {fileID: 0}
   levelClearedUI: {fileID: 1264139803150640}
   scoreUI: {fileID: 114976969581481972}
+  goToShipUI: {fileID: 0}
   score: 0
+  enemyCount: 0
 --- !u!114 &114976969581481972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -359,7 +362,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 
+  m_text: 512545
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 664fd8761dc01cc40a07e8f25a0cfdaa, type: 2}
   m_sharedMaterial: {fileID: 21772962438461026, guid: 664fd8761dc01cc40a07e8f25a0cfdaa,
@@ -395,7 +398,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_textAlignment: 514
+  m_textAlignment: 516
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -403,7 +406,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_firstOverflowCharacterIndex: -1
@@ -425,16 +428,16 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0.21654402, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 114976969581481972}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -521,8 +524,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 87}
-  m_SizeDelta: {x: 401.3, y: 144.4}
+  m_AnchoredPosition: {x: 0.0000038146973, y: 43.5}
+  m_SizeDelta: {x: 356.11, y: 57.895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224979193127134568
 RectTransform:
@@ -539,6 +542,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -44.9, y: -25}
-  m_SizeDelta: {x: 55.539978, y: 50}
+  m_AnchoredPosition: {x: -169.1, y: -23}
+  m_SizeDelta: {x: 304.65, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
