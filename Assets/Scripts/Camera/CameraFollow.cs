@@ -2,8 +2,17 @@
 
 public class CameraFollow : MonoBehaviour
 {
+    public Camera myCamera;
+    GameObject[] ObjectList = null;
+    int index = 0;
+
+    public Vector3 destinationPos = new Vector3(-72.16f, 4.67f, 0f);
+
     [SerializeField]
     private Transform target;
+
+    [SerializeField]
+    public GameObject player;
 
     [SerializeField]
     private bool restrictCamera = false;
@@ -22,7 +31,23 @@ public class CameraFollow : MonoBehaviour
 
     [SerializeField]
     public Vector3 offset;
-   
+
+    private void Start()
+    {
+        myCamera.orthographicSize = 12;
+        player.gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (target.position == destinationPos)
+        {
+            findNext();
+            myCamera.orthographicSize = 3.5f;
+            player.gameObject.SetActive(true);
+        }
+    }
+
     void LateUpdate()
     {
         if (restrictCamera)
@@ -34,4 +59,21 @@ public class CameraFollow : MonoBehaviour
             transform.position = new Vector3(target.transform.position.x + offset.x, target.transform.position.y + offset.y, transform.position.z);
         }
     }
+    
+    void Awake()
+    {
+        ObjectList = GameObject.FindGameObjectsWithTag("Player");
+    }
+    
+    void findNext()
+    {
+        index++;
+        if (index >= ObjectList.Length)
+        {
+            index = 0;
+        }
+        target = ObjectList[index].transform;
+
+    }
+
 }
