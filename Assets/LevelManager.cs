@@ -39,8 +39,8 @@ public class LevelManager : MonoBehaviour {
 
         if (!EnemiesAlive && !levelComplete) // Level complete
         {
-            EndLevel();
             levelComplete = true;
+            EndLevel();
         }
     }
 
