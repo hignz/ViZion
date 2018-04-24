@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d67b70769cd354041874cbb844785c7c
-timeCreated: 1524581937
+timeCreated: 1524327038
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -176,7 +176,7 @@ TextureImporter:
     21300338: okay_169
     21300340: okay_170
     21300342: okay_171
-    21300344: PurNBlack
+    21300344: okay_172
     21300346: brownTile
     21300348: okay_174
     21300350: okay_175
@@ -224,11 +224,7 @@ TextureImporter:
     21300434: okay_217
     21300436: pinkTile
     21300438: darkish_green_wood
-    21300440: okay_33
-    21300442: BlackNWhiteTile
-    21300444: okay_218
-    21300446: okay_219
-    21300448: WoodFloor
+  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -282,6 +278,7 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -290,6 +287,7 @@ TextureImporter:
     overridden: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -762,13 +760,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: okay_33
+      name: brown_tile
       rect:
         serializedVersion: 2
-        x: 547
-        y: 335
-        width: 160
-        height: 128
+        x: 627
+        y: 399
+        width: 17
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2708,6 +2706,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
+      name: brownTile
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 110
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
       name: okay_174
       rect:
         serializedVersion: 2
@@ -3324,69 +3336,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: okay_218
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 143
-        width: 32
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: okay_219
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 31
-        width: 25
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: WoodFloor
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 175
-        width: 32
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: BlackNWhiteTile
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 222
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: PurNBlack
+      name: pinkTile
       rect:
         serializedVersion: 2
         x: 225
         y: 126
         width: 16
         height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: darkish_green_wood
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 63
+        width: 32
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

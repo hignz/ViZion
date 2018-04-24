@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a1f8fa5d8cb407549ad00c6bf043ce2f
-timeCreated: 1524582196
+timeCreated: 1524091369
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -924,7 +924,7 @@ TextureImporter:
     21301834: BqX1wYx_917
     21301836: BqX1wYx_918
     21301838: BqX1wYx_919
-    21301840: greenCarpet
+    21301840: BqX1wYx_920
     21301842: BqX1wYx_921
     21301844: BqX1wYx_922
     21301846: BqX1wYx_923
@@ -1389,6 +1389,7 @@ TextureImporter:
     21302764: ground4
     21302766: ground5
     21302768: ground6
+  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -1442,6 +1443,7 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -1450,6 +1452,7 @@ TextureImporter:
     overridden: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -14340,7 +14343,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: greenCarpet
+      name: BqX1wYx_920
       rect:
         serializedVersion: 2
         x: 128
