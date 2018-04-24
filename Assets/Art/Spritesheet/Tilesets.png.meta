@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a1f8fa5d8cb407549ad00c6bf043ce2f
-timeCreated: 1524091369
+timeCreated: 1524603363
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -561,7 +561,7 @@ TextureImporter:
     21301108: BqX1wYx_554
     21301110: BqX1wYx_555
     21301112: BqX1wYx_556
-    21301114: BqX1wYx_557
+    21301114: Grass
     21301116: BqX1wYx_558
     21301118: BqX1wYx_559
     21301120: BqX1wYx_560
@@ -770,7 +770,7 @@ TextureImporter:
     21301526: BqX1wYx_763
     21301528: BqX1wYx_764
     21301530: BqX1wYx_765
-    21301532: BqX1wYx_766
+    21301532: Fancy Carpet
     21301534: BqX1wYx_767
     21301536: BqX1wYx_768
     21301538: BqX1wYx_769
@@ -825,11 +825,11 @@ TextureImporter:
     21301636: BqX1wYx_818
     21301638: BqX1wYx_819
     21301640: BqX1wYx_820
-    21301642: BqX1wYx_821
+    21301642: Carpet
     21301644: BqX1wYx_822
     21301646: BqX1wYx_823
     21301648: BqX1wYx_824
-    21301650: BqX1wYx_825
+    21301650: BlackNWhite_Tile
     21301652: BqX1wYx_826
     21301654: BqX1wYx_827
     21301656: BqX1wYx_828
@@ -1450,6 +1450,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -1459,6 +1460,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -9261,13 +9263,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BqX1wYx_557
+      name: Grass
       rect:
         serializedVersion: 2
-        x: 352
-        y: 334
-        width: 16
-        height: 16
+        x: 354
+        y: 335
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -12187,7 +12189,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BqX1wYx_766
+      name: Fancy Carpet
       rect:
         serializedVersion: 2
         x: 656
@@ -12957,7 +12959,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BqX1wYx_821
+      name: Carpet
       rect:
         serializedVersion: 2
         x: 128
@@ -13013,10 +13015,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BqX1wYx_825
+      name: BlackNWhite_Tile
       rect:
         serializedVersion: 2
-        x: 192
+        x: 193
         y: 222
         width: 16
         height: 16
