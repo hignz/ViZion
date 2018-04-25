@@ -73,23 +73,12 @@ public class AttackInRange : MonoBehaviour
     {
         FaceDirectionOf(target);
 
-        //Vector2 dest = new Vector2(target.position.x + 1f, target.position.y + 1f);
         Vector2 firePos = new Vector2(firePoint.position.x, firePoint.position.y);
 
-        //RaycastHit2D hit = Physics2D.Raycast(firePos, dest - firePos, 100, whatToHit);
-        //Debug.DrawLine(firePos, (dest - firePos) * 100, Color.cyan, 4);
-
-        //// Show bullet trail
-        Instantiate(BulletLine, firePos, firePoint.transform.rotation);
+        GameObject bullet = Instantiate(BulletLine, firePos, firePoint.transform.rotation);
+        bullet.transform.Rotate(0, 0, UnityEngine.Random.Range(-10, 10));
 
         PlaySoundEffect();
-
-        //if (hit.collider != null)
-        //{
-        //    Debug.DrawLine(firePos, hit.point, Color.red, 6);
-        //    Debug.Log("I hit " + hit.collider.name);
-        //}
-
     }
 
     private void FaceDirectionOf(Transform target)

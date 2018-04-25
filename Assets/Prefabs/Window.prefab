@@ -9,43 +9,43 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1421923311667848}
+  m_RootGameObject: {fileID: 1491725631279348}
   m_IsPrefabParent: 1
---- !u!1 &1421923311667848
+--- !u!1 &1491725631279348
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4126986217493800}
-  - component: {fileID: 212274397163924616}
+  - component: {fileID: 4045892929906990}
+  - component: {fileID: 212056843365585124}
   m_Layer: 0
-  m_Name: Evan_Sprites_88
+  m_Name: Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4126986217493800
+--- !u!4 &4045892929906990
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1421923311667848}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0147657, y: -11.94644, z: 0}
+  m_GameObject: {fileID: 1491725631279348}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7078557, w: 0.7063571}
+  m_LocalPosition: {x: 11.361, y: -2.086, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &212274397163924616
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.121}
+--- !u!212 &212056843365585124
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1421923311667848}
+  m_GameObject: {fileID: 1491725631279348}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -74,12 +74,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300176, guid: 91541df6ebad60a4d811364e90335c50, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5237c9d6bc1250146b51b95f9d102157, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.8, y: 0.8}
+  m_Size: {x: 0.8333333, y: 0.13333334}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

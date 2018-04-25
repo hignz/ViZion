@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0606529f9bba843bf3da2dec65d393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
   restartPromt: {fileID: 114702874865643314, guid: 153f8d4456284b3449f1d50c77406ab3,
     type: 2}
 --- !u!120 &120287246364164702
