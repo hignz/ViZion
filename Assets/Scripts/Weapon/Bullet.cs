@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
 
 public class Bullet : MonoBehaviour
 {
@@ -52,6 +53,15 @@ public class Bullet : MonoBehaviour
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
+            //StartCoroutine(LateCall());
         }
     }
+
+    IEnumerator LateCall()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }

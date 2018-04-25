@@ -11,7 +11,7 @@ public class PickupScript : MonoBehaviour {
         if (Input.GetButtonDown("Pickup") && pickupInRange)
         {
             transform.Find("WeaponSlot").GetComponent<WeaponManager>().PickupWeapon(pickupInRange);
-            pickupInRange.SetActive(false);
+            //pickupInRange.SetActive(false);
         }
     }
 
