@@ -53,13 +53,13 @@ public class Bullet : MonoBehaviour
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-            //StartCoroutine(LateCall());
+            StartCoroutine(LateCall());
         }
     }
 
     IEnumerator LateCall()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
