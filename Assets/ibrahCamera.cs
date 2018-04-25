@@ -16,6 +16,8 @@ public class ibrahCamera : MonoBehaviour
 
     public Vector3 destinationPos = new Vector3(-72.16f, 4.67f, 0f);
 
+    public int speed = 10;
+
     [SerializeField]
     private bool restrictCamera = false;
 
@@ -60,6 +62,15 @@ public class ibrahCamera : MonoBehaviour
             myCamera.orthographicSize = 3.5f;
             player.gameObject.SetActive(true);
         }
+
+        //if (Input.GetKeyDown(KeyCode.LeftShift))
+        //{
+        //    LookAhead();
+        //}
+        //else
+        //{
+        //    transform.LookAt(target);
+        //}
     }
 
     void Awake()
@@ -76,6 +87,21 @@ public class ibrahCamera : MonoBehaviour
         }
         target = ObjectList[index].transform;
 
+    }
+
+    void LookAhead()
+    {
+        if (Input.GetAxis("Mouse X") > 0)
+        {
+            transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed,
+                                       0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed);
+        }
+
+        else if (Input.GetAxis("Mouse X") < 0)
+        {
+            transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed,
+                                       0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed);
+        }
     }
 }
 
