@@ -3,18 +3,18 @@ using System.Collections;
 
 public class CameraRotateEffect : MonoBehaviour
 {
-	PlayerMovement pm;
+	PlayerMovement playerMove;
 	float mod=0.1f;
 	float zVal=0.0f;
 
 	void Start ()
     {
-		pm = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerMovement> ();
+		playerMove = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerMovement> ();
 	}
 
 	void Update ()
     {
-		if(pm.moving == true)
+		if(playerMove.moving == true)
 		{
 			Vector3 rotate = new Vector3 (0, 0, zVal);
 			this.transform.eulerAngles = rotate;

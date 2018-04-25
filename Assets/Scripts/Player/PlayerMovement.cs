@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    public bool moving = false;
+    public bool moving;
 
     private Rigidbody2D rb2d;
 
@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        moving = false;
         rb2d = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
     }
