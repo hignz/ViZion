@@ -51,7 +51,6 @@ public class Bullet : MonoBehaviour
             other.gameObject.GetComponent<Player>().Die();
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
         }
     }
 }
