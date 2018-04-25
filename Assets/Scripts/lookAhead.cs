@@ -17,6 +17,11 @@ public class lookAhead : MonoBehaviour {
 
     void Update()
     {
+        LookAhead();
+    }
+
+    void LookAhead()
+    {
         if (Input.GetAxis("Mouse X") > 0)
         {
             transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed,
