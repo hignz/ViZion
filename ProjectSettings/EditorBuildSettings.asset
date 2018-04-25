@@ -18,14 +18,17 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScene.unity
     guid: 3892149a11e89994bb7a173f7f89cdce
   - enabled: 1
-    path: Assets/Scenes/ArcadeAreaTest.unity
-    guid: 7ca1ccb2c641a314f8ea3aa9fe451909
-  - enabled: 1
-    path: Assets/Scenes/ArcadeGame1.unity
-    guid: 032a583f57c15c449849475e62ae66a7
+    path: Assets/Scenes/Loch's.unity
+    guid: 80a3523054a6667498d611a42b0afb99
   - enabled: 1
     path: Assets/Scenes/ibrah_scene.unity
     guid: 6ac4bc6d2e8b9be48a509f5b5e81c4f9
   - enabled: 1
     path: Assets/Scenes/MarkW_Scene.unity
     guid: bdd58703930d2fc47981c6608d0af176
+  - enabled: 1
+    path: Assets/Scenes/ArcadeAreaTest.unity
+    guid: 7ca1ccb2c641a314f8ea3aa9fe451909
+  - enabled: 1
+    path: Assets/Scenes/ArcadeGame1.unity
+    guid: 032a583f57c15c449849475e62ae66a7
