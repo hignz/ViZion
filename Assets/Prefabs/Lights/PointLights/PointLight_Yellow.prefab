@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4609137982976824}
   - component: {fileID: 108538904405067672}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: PointLight_Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
