@@ -34,18 +34,18 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
-        myCamera.orthographicSize = 12;
-        player.gameObject.SetActive(false);
+        //myCamera.orthographicSize = 12;
+       // player.gameObject.SetActive(false);
     }
 
     void Update()
     {
-        if (target.position == destinationPos && myCamera != null)
-        {
-            findNext();
-            myCamera.orthographicSize = 3.5f;
-            player.gameObject.SetActive(true);
-        }
+        //if (target.position == destinationPos && myCamera != null)
+        //{
+        //    //findNext();
+        //    myCamera.orthographicSize = 3.5f;
+        //    player.gameObject.SetActive(true);
+        //}
     }
 
     void LateUpdate()
@@ -60,20 +60,20 @@ public class CameraFollow : MonoBehaviour
         }
     }
     
-    void Awake()
-    {
-        ObjectList = GameObject.FindGameObjectsWithTag("Player");
-    }
+    //void Awake()
+    //{
+    //    ObjectList = GameObject.FindGameObjectsWithTag("Player");
+    //}
     
-    void findNext()
-    {
-        index++;
-        if (index >= ObjectList.Length)
-        {
-            index = 0;
-        }
-        target = ObjectList[index].transform;
+    //void findNext()
+    //{
+    //    index++;
+    //    if (index >= ObjectList.Length)
+    //    {
+    //        index = 0;
+    //    }
+    //    target = ObjectList[index].transform;
 
-    }
+    //}
 
 }
