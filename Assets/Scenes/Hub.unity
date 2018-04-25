@@ -542,6 +542,31 @@ Prefab:
       propertyPath: InitialModule.startLifetime.minScalar
       value: 0.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198028131253201278, guid: 08ce9a65f40c8ff4080d2b86aeb16d91,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198028131253201278, guid: 08ce9a65f40c8ff4080d2b86aeb16d91,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198028131253201278, guid: 08ce9a65f40c8ff4080d2b86aeb16d91,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198028131253201278, guid: 08ce9a65f40c8ff4080d2b86aeb16d91,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198028131253201278, guid: 08ce9a65f40c8ff4080d2b86aeb16d91,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08ce9a65f40c8ff4080d2b86aeb16d91, type: 2}
   m_IsPrefabParent: 0
@@ -1417,6 +1442,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1204618618}
+    - target: {fileID: 1114515884379186, guid: 45c90f98fdc4aad48b6a77859da691a8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45c90f98fdc4aad48b6a77859da691a8, type: 2}
   m_IsPrefabParent: 0

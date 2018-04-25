@@ -108,8 +108,7 @@ MonoBehaviour:
     m_Bits: 13312
   gunShotSFX: {fileID: 0}
   reloadSFX: {fileID: 0}
-  LineRendererPrefab: {fileID: 4419451935091828, guid: e9ca2896a70452441a44098e29b36127,
-    type: 2}
+  BulletLine: {fileID: 1698527231664026, guid: e9ca2896a70452441a44098e29b36127, type: 2}
 --- !u!114 &114478485941055726
 MonoBehaviour:
   m_ObjectHideFlags: 1
