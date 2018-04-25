@@ -26,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ibrah_scene.unity
     guid: 6ac4bc6d2e8b9be48a509f5b5e81c4f9
+  - enabled: 1
+    path: Assets/Scenes/MarkW_Scene.unity
+    guid: bdd58703930d2fc47981c6608d0af176
