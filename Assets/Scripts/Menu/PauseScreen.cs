@@ -44,6 +44,12 @@ public class PauseScreen : MonoBehaviour {
         SceneManager.LoadScene(0);
     }
 
+    public void ToHub()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(1);
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quitting");
