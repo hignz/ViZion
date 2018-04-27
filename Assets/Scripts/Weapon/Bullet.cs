@@ -15,13 +15,17 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        GetComponent<SpriteRenderer>().transform.localScale.Set(1, 1 + Random.Range(-2f, 2f), 1);
+
+        Destroy(gameObject, 1.2f);
+
+
     }
 
     void Update()
     {
         rb.AddForce(transform.right * speed);
-
-        Destroy(gameObject, 1);
 
         if (gameOver == true && Input.GetButtonDown("Restart"))
         {
@@ -53,7 +57,7 @@ public class Bullet : MonoBehaviour
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-            //StartCoroutine(LateCall());
+            StartCoroutine(LateCall());
         }
     }
 
