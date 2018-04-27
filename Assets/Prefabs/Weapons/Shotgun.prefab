@@ -65,8 +65,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088286475097558}
   m_LocalRotation: {x: -0, y: -0, z: -0.78164536, w: 0.62372315}
-  m_LocalPosition: {x: 1.17, y: -3.29, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
+  m_LocalPosition: {x: 1.59, y: -3.29, z: 0}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children:
   - {fileID: 4581036034795886}
   m_Father: {fileID: 0}
@@ -86,7 +86,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.47
+  m_Radius: 0.26
 --- !u!114 &114394166070926918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,7 +109,7 @@ MonoBehaviour:
   gunShotSFX: {fileID: 0}
   reloadSFX: {fileID: 0}
   BulletLine: {fileID: 1698527231664026, guid: e9ca2896a70452441a44098e29b36127, type: 2}
-  bulletSpread: 9
+  bulletSpreadMax: 10
 --- !u!114 &114541943337201772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,8 +154,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: 15bae3eec5293694a8c9773194e667e0, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300262, guid: 209ddd355d156dd4685d5b863b56fce1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
