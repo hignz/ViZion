@@ -17,6 +17,8 @@ public class AttackInRange : MonoBehaviour
     private float lastShotTime;
     private int ammo = 24;
 
+    public Sprite SurrenderedSprite;
+
     private void Start()
     {
         pathScript = GetComponent<FollowPath>();
@@ -38,13 +40,19 @@ public class AttackInRange : MonoBehaviour
             isTracking = true;
             pathScript.doMove = false;
 
-            if (lastShotTime > 0.05 && ammo > 0)
+            if (lastShotTime > 0.1 && ammo > 0)
             {
                 ammo--;
 
                 Shoot(ObjectToTrack.transform);
 
                 lastShotTime = 0;
+            }
+            else if (ammo <= 0)
+            {
+                pathScript.moveSpeed = 0;
+                GetComponent<SpriteRenderer>().sprite = SurrenderedSprite;
+                GetComponent<BoxCollider2D>().isTrigger = true;
             }
         }
         else
@@ -76,7 +84,7 @@ public class AttackInRange : MonoBehaviour
         Vector2 firePos = new Vector2(firePoint.position.x, firePoint.position.y);
 
         GameObject bullet = Instantiate(BulletLine, firePos, firePoint.transform.rotation);
-        bullet.transform.Rotate(0, 0, UnityEngine.Random.Range(-10, 10));
+        bullet.transform.Rotate(0, 0, UnityEngine.Random.Range(-2, 2));
 
         PlaySoundEffect();
     }
