@@ -20,23 +20,28 @@ public class LevelManager : MonoBehaviour {
     public TextMeshProUGUI scoreUI;
     public GameObject goToShipUI;
 
-    public int score = 0;
+    public static float score = 0;
+    private static float multiplier = 1f;
 
     public int enemyCount = 0;
     bool levelComplete = false;
+
+    private float timeSinceHit = 0;
     
     void Start ()
     {
-        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-
         Debug.Log(enemyCount);
     }
 
     void Update ()
     {
+        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
+        Debug.Log(enemyCount);
+
         if (score >= 100)
         {
-            scoreUI.text = "" + score;
+            scoreUI.text = "" + (int)LevelManager.score;
         }
 
         if (!EnemiesAlive && !levelComplete) // Level complete
@@ -49,6 +54,11 @@ public class LevelManager : MonoBehaviour {
     public void RemoveEnemy()
     {
         enemyCount--;
+    }
+
+    public void AddScore(float amount)
+    {
+        LevelManager.score += amount * multiplier;
     }
 
     IEnumerator LateCall()

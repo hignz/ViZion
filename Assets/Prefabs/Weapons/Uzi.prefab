@@ -65,8 +65,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1078535388995474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.883, y: -4.229, z: 0}
-  m_LocalScale: {x: 1.2000004, y: 1.2000004, z: 1}
+  m_LocalPosition: {x: 0.883, y: -4.896, z: 0}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children:
   - {fileID: 4488585035393418}
   m_Father: {fileID: 0}
@@ -86,7 +86,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.51
+  m_Radius: 0.24
 --- !u!114 &114250165830916398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10000
   ammo: 32
-  fireRate: 0.06
+  fireRate: 0.08
   firePoint: {fileID: 4488585035393418}
   type: 1
   whatToHit:
@@ -153,8 +153,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300028, guid: 30d2d0c6048d83f489f0f5a1b4fded55, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300090, guid: 209ddd355d156dd4685d5b863b56fce1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

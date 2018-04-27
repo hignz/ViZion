@@ -56,43 +56,10 @@ public class WeaponManager : MonoBehaviour
         {
             emptyClipSFX.Play();
         }
-
-        //    if (Input.GetButtonDown("Fire1") && weaponScript.type == Weapon.WeaponType.Spread && lastShotTime > weaponScript.fireRate)
-        //    {
-        //        //if (Input.GetButtonDown("Fire1") && lastShotTime > weaponScript.fireRate)
-        //        //{
-        //        if (weaponScript.ammo <= 0)
-        //        {
-        //            emptyClipSFX.Play();
-        //            return;
-        //        }
-
-        //        lastShotTime = 0;
-
-        //        for (int i = 0; i < 4; i++)
-        //        {
-        //            weaponScript.Fire();
-        //        }
-
-        //        weaponScript.ammo--;
-        //        // }
-        //    }
-        //    else if (Input.GetButton("Fire1") && weaponScript.type == Weapon.WeaponType.AutoFire && lastShotTime > weaponScript.fireRate)
-        //    {
-        //        //if (Input.GetButton("Fire1") && lastShotTime > weaponScript.fireRate)
-        //        //{
-        //        lastShotTime = 0;
-        //        weaponScript.Fire();
-
-        //        weaponScript.ammo--;
-        //        // }
-        //    }
-
-        //}
-        //else if (weaponScript.ammo <= 0)
-        //{
-        //    //emptyClipSFX.Play();
-        //}
+        else if (currentWeapon != null && Input.GetButtonDown("Pickup"))
+        {
+            ThrowWeapon();
+        }
 
         if (Input.GetButtonUp("DropWeapon"))
         {
@@ -106,6 +73,11 @@ public class WeaponManager : MonoBehaviour
         {
             ammoCountUI.text = "" + weaponScript.ammo;
         }
+    }
+
+    public void ThrowWeapon()
+    {
+        //currentWeapon.GetComponent<Rigidbody2D>().AddForce(, ForceMode2D.Force);
     }
 
     public void PickupWeapon(GameObject pickup)
@@ -140,7 +112,7 @@ public class WeaponManager : MonoBehaviour
         Vector3 pos = new Vector3(transform.position.x, transform.position.y);
         currentWeapon.transform.parent = null;
         currentWeapon.transform.position = pos;
-        currentWeapon.transform.localScale = new Vector3(1f, 1f, 1);
+        currentWeapon.transform.localScale = new Vector3(3f, 3f, 1);
         currentWeapon.SetActive(true);
         ammoCountUI.gameObject.SetActive(false);
         GetComponentInParent<Player>().SwapToUnequippedSprite();

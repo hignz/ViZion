@@ -19,6 +19,7 @@ TagManager:
   - playerSpawner
   - chopper
   - Prop
+  - GodMode
   layers:
   - Default
   - TransparentFX
