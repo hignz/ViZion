@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 114649573858821270}
   - component: {fileID: 114104656817997602}
   - component: {fileID: 114989187490532074}
+  - component: {fileID: 95689529256870420}
   m_Layer: 8
   m_Name: Player_2
   m_TagString: Player
@@ -58,14 +59,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1913318601163156}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.885, y: -4.254, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7092272, w: 0.7049801}
+  m_LocalPosition: {x: 2.42, y: -1.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4698312220456900}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.344}
 --- !u!4 &4698312220456900
 Transform:
   m_ObjectHideFlags: 1
@@ -73,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1378793060686522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.727, y: 0.009, z: 0}
+  m_LocalPosition: {x: 0.176, y: -0.055, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 4556380659462438}
@@ -216,7 +217,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: a8f8184a2cfe5c143a3bf67188ad81fd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.456
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -285,6 +286,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95689529256870420
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1913318601163156}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6feaca19463e35a41b242f1bf2a222be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114081202378361846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -323,9 +341,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07043a175f82ebd49a099c1191b613f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equip: {fileID: 21300308, guid: 91541df6ebad60a4d811364e90335c50, type: 3}
+  equip: {fileID: 21300646, guid: 91541df6ebad60a4d811364e90335c50, type: 3}
   unequipped: {fileID: 21300018, guid: 91541df6ebad60a4d811364e90335c50, type: 3}
-  pickupText: {fileID: 0}
+  godMode: 0
+  hasSlowTime: 1
 --- !u!114 &114649573858821270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -338,6 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  moving: 0
   myAnim: {fileID: 0}
   restrictMovement: 0
   restrictMinX: -5
@@ -356,6 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupInRange: {fileID: 0}
+  pickupText: {fileID: 0}
 --- !u!212 &212559538228731820
 SpriteRenderer:
   m_ObjectHideFlags: 1

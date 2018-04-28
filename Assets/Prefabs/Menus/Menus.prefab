@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 114229687625424118}
   - component: {fileID: 114514335706096212}
   m_Layer: 5
-  m_Name: ButtonExitMenu
+  m_Name: ButtonToSpace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -884,8 +884,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: ViZion
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: de721ae4cdf8f3d46957bc5c280ae1f3, type: 2}
-  m_sharedMaterial: {fileID: 21861636602432706, guid: de721ae4cdf8f3d46957bc5c280ae1f3,
+  m_fontAsset: {fileID: 11400000, guid: adee1f965447bb04d9f077ca25cc795d, type: 2}
+  m_sharedMaterial: {fileID: 21573431224226768, guid: adee1f965447bb04d9f077ca25cc795d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1294,8 +1294,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: ToMainMenu
+      - m_Target: {fileID: 114755748983710518}
+        m_MethodName: ToHub
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1764,7 +1764,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Main Menu
+  m_text: To Space
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de721ae4cdf8f3d46957bc5c280ae1f3, type: 2}
   m_sharedMaterial: {fileID: 21861636602432706, guid: de721ae4cdf8f3d46957bc5c280ae1f3,
