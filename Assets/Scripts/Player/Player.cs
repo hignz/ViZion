@@ -18,10 +18,11 @@ public class Player : MonoBehaviour {
             ToggleGodMode();
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse2))
+        if (Input.GetKeyDown(KeyCode.Mouse2) && hasSlowTime == true)
         {
             Debug.Log("yooo");
             Time.timeScale = 0.5f;
+            Time.fixedDeltaTime = 0.02F * Time.timeScale;
 
             hasSlowTime = false;
 
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour {
         yield return new WaitForSeconds(1f);
 
         Time.timeScale = 1f;
+        Time.fixedDeltaTime = 0.02f;
     }
 
     public void ToggleGodMode()
@@ -55,6 +57,8 @@ public class Player : MonoBehaviour {
     public void Die()
     {
         GameObject deadBody = GameObject.Instantiate(FindObjectOfType<SpriteManager>().GetPlayerDead(), transform.position, transform.rotation);
+        deadBody.GetComponent<SpriteRenderer>().sortingOrder = 5;
+
         FindObjectOfType<SpriteManager>().SpawnBloodSplatter(transform);
        // gameObject.SetActive(false);
         Destroy(gameObject);
