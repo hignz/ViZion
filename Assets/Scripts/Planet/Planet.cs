@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Planet : MonoBehaviour {
+
+    public string name;
 
     [SerializeField]
     public int requiredPoints;
 
-    public GameObject lockedUI;
-    public GameObject unlockedUI;
+    public TextMeshProUGUI lockedStatusUI;
 
     public bool hasRotation = true;
 
@@ -32,7 +34,10 @@ public class Planet : MonoBehaviour {
 
     void FixedUpdate()
     {
-        transform.RotateAround(orbitTarget.position, zAxis, orbitSpeed * Time.deltaTime);
+        if (orbitTarget != null)
+        {
+            transform.RotateAround(orbitTarget.position, zAxis, orbitSpeed * Time.deltaTime);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,13 +46,13 @@ public class Planet : MonoBehaviour {
         {
             if (FindObjectOfType<GameManager>().playerPoints >= requiredPoints)
             {
-                unlockedUI.SetActive(true);
-                lockedUI.SetActive(false);
+                lockedStatusUI.text = "Unlocked\n" 
+                    + "Name: " + name +
+                    "\nRequired points: " + requiredPoints;
             }
             else
             {
-                lockedUI.SetActive(true);
-                unlockedUI.SetActive(false);
+                lockedStatusUI.text = "Locked: " + name;
             }
         }
     }
@@ -56,7 +61,7 @@ public class Planet : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (FindObjectOfType<GameManager>().playerPoints >= requiredPoints && Input.GetKeyUp(KeyCode.Space))
+            if (FindObjectOfType<GameManager>().playerPoints >= requiredPoints && Input.GetKeyUp(KeyCode.E))
             {
                 SceneManager.LoadScene(level.name);
             }
@@ -67,8 +72,7 @@ public class Planet : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            unlockedUI.SetActive(false);
-            lockedUI.SetActive(false);
+            lockedStatusUI.text = string.Empty;
         }
     }
 }
