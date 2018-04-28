@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1030121908874678}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.34, y: -0.001, z: 0}
+  m_LocalPosition: {x: 0.15, y: -0.009, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 4686074883675076}
@@ -64,14 +64,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088286475097558}
-  m_LocalRotation: {x: -0, y: -0, z: -0.78164536, w: 0.62372315}
+  m_LocalRotation: {x: -0, y: -0, z: -0.049793337, w: 0.99875957}
   m_LocalPosition: {x: 1.59, y: -3.29, z: 0}
-  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 4581036034795886}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -102.823006}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.708}
 --- !u!58 &58963792963209698
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   ammo: 12
-  fireRate: 1
+  fireRate: 0.9
   firePoint: {fileID: 4581036034795886}
   type: 2
   whatToHit:
