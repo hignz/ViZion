@@ -28,7 +28,12 @@ public class LevelManager : MonoBehaviour {
 
     private static float comboTimer = 2.5f;
     private static bool comboActive = false;
-    
+
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
+
     void Update ()
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
@@ -51,8 +56,6 @@ public class LevelManager : MonoBehaviour {
             comboTimer = 2.5f;
             ResetMultiplier();
         }
-
-        print("Mult: " + multiplier);
     }
 
     void LateUpdate()
