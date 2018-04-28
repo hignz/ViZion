@@ -6,18 +6,6 @@ public class Window : MonoBehaviour
 {
     public GameObject brokenWindow;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void OnCollisionEnter2D(Collision2D other)
     {
         string tag = other.gameObject.tag;
@@ -25,7 +13,19 @@ public class Window : MonoBehaviour
         if (tag == "Bullet")
         {
             Destroy(gameObject);
-            Instantiate(brokenWindow, transform.position, transform.rotation).SetActive(true); ;
+            BreakWindow();
+        }
+    }
+
+    void BreakWindow()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            Vector3 randomPosition = transform.position;
+            randomPosition.x += Random.Range(-1f, 1f);
+            randomPosition.y += Random.Range(-1f, 1f);
+
+            Instantiate(brokenWindow, randomPosition, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f))).SetActive(true);
         }
     }
 }
