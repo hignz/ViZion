@@ -13,27 +13,26 @@ public class Uzi : Weapon
     public override void Fire()
     {
         GameObject bullet = Instantiate(BulletLine, firePoint.position, firePoint.rotation);
-        bullet.transform.Rotate(0, 0, Random.Range(-1, 1));
+        //bullet.transform.Rotate(0, 0, Random.Range(-1, 1));
 
         PlaySoundEffect();
     }
 
-    void CheckHit(RaycastHit2D hit)
-    {
-        string tag = hit.collider.tag;
+    //void CheckHit(RaycastHit2D hit)
+    //{
+    //    string tag = hit.collider.tag;
 
-        switch (tag)
-        {
-            case "Enemy":
-                Debug.Log("Hit enemy: " + hit.collider.tag);
+    //    switch (tag)
+    //    {
+    //        case "Enemy":
+    //            Debug.Log("Hit enemy: " + hit.collider.tag);
 
-                hit.collider.gameObject.GetComponent<Enemy>().Die();
-                FindObjectOfType<LevelManager>().RemoveEnemy();
-                break;
-            default:
-                break;
-        }
-    }
+    //            hit.collider.gameObject.GetComponent<Enemy>().Die();
+    //            break;
+    //        default:
+    //            break;
+    //    }
+    //}
 
     public override void PlaySoundEffect()
     {

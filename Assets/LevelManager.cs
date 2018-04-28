@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using TMPro;
 using System.Collections;
+using System.Timers;
 
 public class LevelManager : MonoBehaviour {
-
-    public GameObject escapeVehicle;
 
     public bool EnemiesAlive
     {
@@ -14,10 +13,11 @@ public class LevelManager : MonoBehaviour {
         }
     }
 
-    GameObject[] enemies;
+    public GameObject escapeVehicle;
 
     public GameObject levelClearedUI;
     public TextMeshProUGUI scoreUI;
+    public TextMeshProUGUI multiplierUI;
     public GameObject goToShipUI;
 
     public static float score = 0;
@@ -26,46 +26,61 @@ public class LevelManager : MonoBehaviour {
     public int enemyCount = 0;
     bool levelComplete = false;
 
-    private float timeSinceHit = 0;
+    private static float comboTimer = 2.5f;
+    private static bool comboActive = false;
     
-    void Start ()
-    {
-        Debug.Log(enemyCount);
-    }
-
     void Update ()
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-
-        Debug.Log(enemyCount);
-
-        if (score >= 100)
-        {
-            scoreUI.text = "" + (int)LevelManager.score;
-        }
 
         if (!EnemiesAlive && !levelComplete) // Level complete
         {
             EndLevel();
             levelComplete = true;
         }
+
+        if (comboActive)
+        {
+            comboTimer -= Time.deltaTime;
+            print("timer "+comboTimer);
+        }
+
+        if (comboTimer <= 0f && comboActive)
+        {
+            comboActive = false;
+            comboTimer = 2.5f;
+            ResetMultiplier();
+        }
+
+        print("Mult: " + multiplier);
     }
 
-    public void RemoveEnemy()
+    void LateUpdate()
     {
-        enemyCount--;
+        if (LevelManager.score >= 100)
+        {
+            scoreUI.text = "" + (int)LevelManager.score;
+            multiplierUI.text = LevelManager.multiplier + "x";
+        }
     }
 
-    public void AddScore(float amount)
+    public static void AddScore(float amount)
     {
+        comboActive = true;
+        comboTimer = 2.5f;
+        multiplier += 0.25f;
+        print(multiplier);
         LevelManager.score += amount * multiplier;
     }
 
-    IEnumerator LateCall()
+    public static void SetMultiplier(float mult)
     {
-        yield return new WaitForSeconds(1.5f);
+        LevelManager.multiplier = mult;
+    }
 
-        levelClearedUI.gameObject.SetActive(false);
+    public static void ResetMultiplier()
+    {
+        LevelManager.multiplier = 1f;
     }
 
     void EndLevel()
@@ -79,5 +94,13 @@ public class LevelManager : MonoBehaviour {
         escapeVehicle.GetComponent<PolygonCollider2D>().enabled = false;
         escapeVehicle.GetComponent<BoxCollider2D>().enabled = true;
     }
+
+    IEnumerator LateCall()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        levelClearedUI.gameObject.SetActive(false);
+    }
+
 
 }

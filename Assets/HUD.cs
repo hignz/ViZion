@@ -14,10 +14,4 @@ public class HUD : MonoBehaviour {
 
         timer.text = string.Format("{0}:{1:00}", minutes, seconds);
 	}
-
-    void ResetTimer()
-    {
-        timePassed = 0f;
-        timer.text = "";
-    }
 }

@@ -48,11 +48,10 @@ public class AttackInRange : MonoBehaviour
 
                 lastShotTime = 0;
             }
-            else if (ammo <= 0)
+            else if (ammo <= 0) // When out of ammo 
             {
                 pathScript.moveSpeed = 0;
                 GetComponent<SpriteRenderer>().sprite = SurrenderedSprite;
-                GetComponent<BoxCollider2D>().isTrigger = true;
             }
         }
         else
