@@ -28,6 +28,7 @@ public class SpriteManager : MonoBehaviour {
     {
         GameObject bloodPool = Instantiate(bloodSprites[0], player.position, player.rotation);
         bloodPool.GetComponent<SpriteRenderer>().material = player.GetComponent<SpriteRenderer>().material;
+        bloodPool.GetComponent<SpriteRenderer>().sortingOrder = 2;
 
         for (int i = 0; i < 10; i++)
         {
@@ -37,6 +38,7 @@ public class SpriteManager : MonoBehaviour {
 
             GameObject blood = Instantiate(bloodSprites[spriteNumber], new Vector3(randX, randY, player.position.z), player.rotation);
             blood.GetComponent<SpriteRenderer>().material = player.GetComponent<SpriteRenderer>().material;
+            blood.GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
     }
 }
