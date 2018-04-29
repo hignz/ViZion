@@ -8,19 +8,19 @@ public class Bullet : MonoBehaviour
     private bool gameOver = false;
     private Rigidbody2D rb;
 
-    public int speed = 200;
+    public float speed = 20f;
     public TextMeshProUGUI restartPromt;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        Destroy(gameObject, 1.2f);
+        Destroy(gameObject, 5f);
     }
 
     void Update()
     {
-        rb.AddForce(transform.right * speed);
+        rb.AddForce(transform.right * speed, ForceMode2D.Force);
 
         if (gameOver == true && Input.GetButtonDown("Restart"))
         {
@@ -42,7 +42,7 @@ public class Bullet : MonoBehaviour
         }
         else if (tag.Equals("Enemy"))
         {
-            other.gameObject.GetComponent<Enemy>().Die();
+            other.gameObject.GetComponent<Enemy>().TakeDamage(100);
 
             //FindObjectOfType<LevelManager>().RemoveEnemy();
 
