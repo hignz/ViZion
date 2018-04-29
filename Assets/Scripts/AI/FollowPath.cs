@@ -14,6 +14,8 @@ public class FollowPath : MonoBehaviour
     Rigidbody2D body;
     public bool useTriggers = true;
 
+    public bool isLight = false;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -29,7 +31,10 @@ public class FollowPath : MonoBehaviour
             body.MovePosition(Vector2.MoveTowards(
                 transform.position, target, moveSpeed * Time.deltaTime));
 
-            FaceDirection();
+            if (!isLight)
+            {
+                FaceDirection();
+            }
 
             if (!useTriggers)
             {
