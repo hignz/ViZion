@@ -13,11 +13,16 @@ public class CutsceneDisplay : MonoBehaviour
 	public Texture2D bg;
 	public GUIStyle text;
 
-	float originalWidth = 1920.0f;
+	float originalWidth = 1920.0f; //turn these to floats to fix placement issue
 	float originalHeight = 1080.0f;
 	Vector3 scale;
 	bool display = false;
 	public static bool anyCutsceneDisplaying = false;
+
+	void Start () {
+	
+	}
+	
 
 	void Update () {
 		inputControl ();
@@ -53,10 +58,9 @@ public class CutsceneDisplay : MonoBehaviour
 		}
 	}
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
 	{
-        
-        if (other.CompareTag("Player"))
+		if (collision.gameObject.tag == "Player")
         {
             display = true;
             Time.timeScale = 0;
