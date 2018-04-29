@@ -242,8 +242,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faces:
-  - {fileID: 2800000, guid: 25236a110d8da184299697947a1bcfca, type: 3}
-  Text: Welcom to ViZion
+  - {fileID: 0}
+  text: 
 --- !u!114 &114815270434120952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,4 +257,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faces:
   - {fileID: 0}
-  Text: This is a new game
+  text: 

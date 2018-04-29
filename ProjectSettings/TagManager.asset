@@ -19,6 +19,7 @@ TagManager:
   - playerSpawner
   - chopper
   - Prop
+  - BossEnemy
   layers:
   - Default
   - TransparentFX

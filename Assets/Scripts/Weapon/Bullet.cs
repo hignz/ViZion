@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
+
 
 public class Bullet : MonoBehaviour
 {
@@ -8,9 +10,9 @@ public class Bullet : MonoBehaviour
     private Rigidbody2D rb;
 
     public TextMeshProUGUI restartPromt;
-
+    
     private bool gameOver = false;
-
+   
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,6 +32,7 @@ public class Bullet : MonoBehaviour
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D other)
