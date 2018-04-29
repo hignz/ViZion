@@ -32,6 +32,8 @@ public class LevelManager : MonoBehaviour {
     private void Start()
     {
         Time.timeScale = 1f;
+        score = 0;
+        multiplier = 1f;
     }
 
     void Update ()
