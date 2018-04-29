@@ -9,19 +9,21 @@ public class BossController : MonoBehaviour {
     public Image healthBar;
     public int enemyCount = 0;
 
-    public GameObject[] enemyToSpawn;
-    public GameObject[] enemyToSpawnClone;
-    public Transform[] enemySpawnLocations;
+    [SerializeField]
+    public GameObject enemyOne, enemyTwo;
 
 
-    void SpawnEnemies()
+    private void Start()
     {
-        enemyToSpawnClone[0] = Instantiate(enemyToSpawn[0], enemySpawnLocations[0].transform.position, Quaternion.Euler(0, 0, 0)) as GameObject;
+        enemyOne.SetActive(false);
+        enemyTwo.SetActive(false);
     }
 
     private void Update()
     {
-        Debug.Log(bossHealthFloat);
+        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        Debug.Log(enemyCount);
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -30,30 +32,34 @@ public class BossController : MonoBehaviour {
         
         if (tag.Equals("Bullet"))
         {
-            bossHealth -= 1;
+            bossHealth -= 5;
             bossHealthFloat = bossHealth / 100f;
             healthBar.fillAmount = bossHealthFloat;
 
             if (bossHealthFloat == 0.75)
             {
-                SpawnEnemies();
+                gameObject.SetActive(false);
+                enemyOne.SetActive(true);
+                enemyTwo.SetActive(true);
+                
+                healthBar.fillAmount = bossHealthFloat;
             }
-          
+
+
             else if (bossHealthFloat == 0.45)
             {
-                SpawnEnemies();
+
             }
 
             else if (bossHealthFloat == 0.15)
             {
-                SpawnEnemies();
+
             }
 
             else if (bossHealthFloat == 0)
             {
                 Destroy(gameObject);
             }
-            healthBar.fillAmount = bossHealthFloat;
         }
     }
 }

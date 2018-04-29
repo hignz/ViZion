@@ -19,7 +19,6 @@ public class AttackInRange : MonoBehaviour
 
     private void Start()
     {
-        ObjectToTrack = GameObject.FindGameObjectWithTag("Player");
         pathScript = GetComponent<FollowPath>();
         firePoint = GetComponentInChildren<FirePoint>().transform;
     }
