@@ -78,3 +78,13 @@ MonoBehaviour:
   - {fileID: 1473091275429208, guid: c1c736cfa17fc0c45ae33dba648b0389, type: 2}
   - {fileID: 1925612681626136, guid: ae5aada6abead504f9938a093b8cfffb, type: 2}
   - {fileID: 1315149699880468, guid: fa29d3dd5be91774dafe1e442b5a1d5a, type: 2}
+  playerDeathSprites:
+  - {fileID: 1557748253140010, guid: 48689b7f8b90e4549946fea0ded8ffba, type: 2}
+  - {fileID: 1600385342608034, guid: 747c1bb79b89fda45888af49f753a3dd, type: 2}
+  - {fileID: 1189702489122132, guid: eba197c9f9e2093498a887540c79853d, type: 2}
+  - {fileID: 1421923311667848, guid: 057a118ae6e004a43891aed59cc03b4c, type: 2}
+  - {fileID: 1575748430555302, guid: 4fa96e37719ee9d4da263ca17a25bbf5, type: 2}
+  - {fileID: 1573939295461438, guid: 1642defa082cfa640a2bd9520945993c, type: 2}
+  - {fileID: 1563745524123036, guid: a8e96af4a6860b64590742eca12dd72d, type: 2}
+  - {fileID: 1267373703159434, guid: 3ebdf29ca9a075e4f8113ee66e03c888, type: 2}
+  bloodIntensity: 10

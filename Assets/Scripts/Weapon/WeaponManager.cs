@@ -45,7 +45,13 @@ public class WeaponManager : MonoBehaviour
                     }
                     break;
                 case Weapon.WeaponType.SingleFire:
+                    if (Input.GetButtonDown("Fire1") && lastShotTime > weaponScript.fireRate)
+                    {
+                        lastShotTime = 0;
+                        weaponScript.Fire();
 
+                        weaponScript.ammo--;
+                    }
                     break;
                 default:
 

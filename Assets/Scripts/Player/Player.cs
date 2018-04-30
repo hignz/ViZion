@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
             ToggleGodMode();
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse2) && hasSlowTime == true || godMode)
+        if (Input.GetKeyDown(KeyCode.Mouse2) && hasSlowTime == true || Input.GetKeyDown(KeyCode.Mouse2) && godMode)
         {
             Time.timeScale = 0.5f;
             Time.fixedDeltaTime = 0.02F * Time.timeScale;
